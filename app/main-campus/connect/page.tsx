@@ -27,7 +27,7 @@ export default function AdmissionsForm() {
     <div>
       <div className="relative mx-auto max-w-7xl h-[500px] rounded-3xl overflow-hidden">
         <Image
-          src="https://thefks.in/images/campus/Contact%20us%20Cover.JPG"
+          src="/Contact-us-Cover.jpeg"
           alt="Connect"
           fill
           priority

@@ -71,19 +71,19 @@ export default function HomePage() {
       title: "Environment",
       icon: Star,
       text: "Students are surrounded by an environment that nurtures curiosity, supports their growth, and empowers them to be their best selves.",
-      image: "https://thefks.in/images/landing-page/Enivronment.jpg",
+      image: "/Enivronment.jpg",
     },
     {
       title: "Exploration",
       icon: Users,
       text: "Opportunities to explore, experiment, and discover passions through meaningful, hands-on experiences.",
-      image: "https://thefks.in/images/landing-page/Explore%202.png.jpg",
+      image: "/Explore.jpg",
     },
     {
       title: "Experience",
       icon: Globe,
       text: "Experiences that build confidence, foster respect, and create lasting values beyond the classroom.",
-      image: "https://thefks.in/images/landing-page/Experience.jpg",
+      image: "/Experience.jpg",
     },
   ];
 
@@ -165,11 +165,13 @@ export default function HomePage() {
             {/* Slide 1: FKS Education Philosophy */}
             <CarouselItem className="rounded-3xl">
               <div className="relative h-[80vh] min-h-[600px] w-full flex items-end rounded-3xl overflow-hidden">
-                <img
-                  src="https://thefks.in/images/landing-page/Home%20Banner%201.png"
+                <Image
+                  src="/HB1.png"
                   alt="FKS Education"
-                  className="absolute inset-0 w-full h-full object-cover rounded-3xl"
+                  fill
+                  className="absolute inset-0 object-cover rounded-3xl"
                 />
+
                 <div className="absolute inset-0 bg-black/40 rounded-3xl" />
                 <div className="relative z-10 w-full px-4 pb-12 md:pb-16 lg:pb-20 max-w-7xl mx-auto">
                   <div className="max-w-xl md:max-w-2xl text-center md:text-left md:ml-8">
@@ -186,10 +188,11 @@ export default function HomePage() {
             {/* Slide 2: Organic Growth */}
             <CarouselItem className="rounded-3xl">
               <div className="relative h-[80vh] min-h-[600px] w-full flex items-end rounded-3xl overflow-hidden">
-                <img
-                  src="https://thefks.in/images/landing-page/Home%20Banner%202.png"
+                <Image
+                  src="/HB2.png"
                   alt="Organic Growth"
-                  className="absolute inset-0 w-full h-full object-cover rounded-3xl"
+                  fill
+                  className="absolute inset-0 object-cover rounded-3xl"
                 />
                 <div className="absolute inset-0 bg-black/40 rounded-3xl" />
                 <div className="relative z-10 w-full px-4 pb-12 md:pb-16 lg:pb-20 max-w-7xl mx-auto">
@@ -206,10 +209,11 @@ export default function HomePage() {
             {/* Slide 3: Willingness to Learn */}
             <CarouselItem className="rounded-3xl">
               <div className="relative h-[80vh] min-h-[600px] w-full flex items-end rounded-3xl overflow-hidden">
-                <img
-                  src="https://thefks.in/images/landing-page/Slide%203.jpg"
+                <Image
+                  src="/HB3.jpg"
                   alt="Learning Journey"
-                  className="absolute inset-0 w-full h-full object-cover rounded-3xl"
+                  fill
+                  className="absolute inset-0 object-cover rounded-3xl"
                 />
                 <div className="absolute inset-0 bg-black/40 rounded-3xl" />
                 <div className="relative z-10 w-full px-4 pb-12 md:pb-16 lg:pb-20 max-w-7xl mx-auto">
@@ -227,10 +231,11 @@ export default function HomePage() {
             {/* Slide 4: Future Generations */}
             <CarouselItem className="rounded-3xl">
               <div className="relative h-[80vh] min-h-[600px] w-full flex items-end rounded-3xl overflow-hidden">
-                <img
-                  src="https://thefks.in/images/landing-page/Slide%204.jpg"
+                <Image
+                  src="/HB4.jpg"
                   alt="Future Generations"
-                  className="absolute inset-0 w-full h-full object-cover rounded-3xl"
+                  fill
+                  className="absolute inset-0 object-cover rounded-3xl"
                 />
                 <div className="absolute inset-0 bg-black/40 rounded-3xl" />
                 <div className="relative z-10 w-full px-4 pb-12 md:pb-16 lg:pb-20 max-w-7xl mx-auto">
@@ -342,9 +347,11 @@ export default function HomePage() {
               </Link>
             </div>
             <div className="flex justify-center lg:justify-end">
-              <img
-                src="https://thefks.in/images/landing-page/Check.png"
+              <Image
+                src="/Check.png"
                 alt="FKS Students"
+                width={600}
+                height={400}
                 className="rounded-lg shadow-md max-w-full h-auto"
               />
             </div>

@@ -11,14 +11,14 @@ export default function HomePage() {
         <div className="w-full h-full blur-sm" />
         <div className="absolute inset-0 bg-background/80" />
         <Image
-          src="https://thefks.in/static/media/Laptop-PC.2edd87aef5d6c2793b90.png"
+          src="/Laptop-PC.2edd87aef5d6c2793b90.png"
           alt="Students laptop bg"
           fill
           className="object-cover lg:flex hidden"
           priority
         />
         <Image
-          src="https://thefks.in/static/media/mobile.c5f75c33dc61a1770533.png"
+          src="/mobile.c5f75c33dc61a1770533.png"
           alt="Students mobile bg"
           fill
           className="object-cover lg:hidden flex"
@@ -28,11 +28,10 @@ export default function HomePage() {
 
       {/* Main content section */}
       <main className="flex-1 flex flex-col lg:flex-row items-center justify-center gap-12 px-6 md:px-12 py-12">
-        {/* Left: Logo, Name, Slogan */}
         <div className="flex flex-col items-center lg:items-start lg:w-1/2 max-w-lg">
           <div className="mb-4">
-            <img
-              src="https://thefks.in/fks-logo.png"
+            <Image
+              src="/fks-logo.png"
               alt="The Future Kid's School Logo"
               width={300}
               height={280}

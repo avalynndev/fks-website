@@ -8,25 +8,25 @@ const menuItems = [
     name: "Our Story",
     href: "/main-campus/our-story",
     color: "text-green-600",
-    img: "https://thefks.in/images/our-story/Our%20Story%20Banner.jpg",
+    img: "/Our-Story-Banner.jpg",
   },
   {
     name: "FKS Perspective - Philosophy, Vision & Mission",
     href: "/main-campus/mission-and-vision",
     color: "text-green-600",
-    img: "https://thefks.in/images/mission-and-vision/M&V%20Banner.jpg",
+    img: "/M&V-Banner.jpg",
   },
   {
     name: "FKS Force",
     href: "/main-campus/fks-force",
     color: "text-green-600",
-    img: "https://thefks.in/images/fks-force/banner1.jpg",
+    img: "/banner1.jpg",
   },
   {
     name: "Nutrition",
     href: "/main-campus/nutrition",
     color: "text-green-600",
-    img: "https://thefks.in/images/nutrition/Idli.jpeg",
+    img: "/Idli.jpeg",
   },
 ];
 

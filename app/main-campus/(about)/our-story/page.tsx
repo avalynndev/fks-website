@@ -46,7 +46,7 @@ export default function HeroSection() {
           {/* Image 1 */}
           <div className="relative w-124 h-64 transform -rotate-6 shadow-lg border-4 border-white rounded-lg overflow-hidden">
             <Image
-              src="https://thefks.in/images/our-story/OS%204.jpg"
+              src="/OS1.jpg"
               alt="Gallery 1"
               fill
               className="object-cover"
@@ -55,7 +55,7 @@ export default function HeroSection() {
           {/* Image 2 (center, larger) */}
           <div className="relative w-132 h-72 transform rotate-3 shadow-lg border-4 border-white rounded-lg overflow-hidden z-10">
             <Image
-              src="https://thefks.in/images/our-story/OS%203.jpg"
+              src="/OS2.jpg"
               alt="Gallery 2"
               fill
               className="object-cover"
@@ -64,7 +64,7 @@ export default function HeroSection() {
           {/* Image 3 */}
           <div className="relative w-114 h-64 transform rotate-6 shadow-lg border-4 border-white rounded-lg overflow-hidden">
             <Image
-              src="https://thefks.in/images/our-story/OS%207.jpg"
+              src="/OS3.jpg"
               alt="Gallery 3"
               fill
               className="object-cover"

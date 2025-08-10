@@ -11,7 +11,7 @@ export default function HeroSection() {
             {/* Image */}
             <div className="relative w-full h-80 rounded-2xl overflow-hidden">
               <Image
-                src="https://thefks.in/images/fks-force/Teachers%201.JPG"
+                src="/Teachers.jpeg"
                 alt="Fks Force"
                 fill
                 className="object-cover"
@@ -48,7 +48,7 @@ export default function HeroSection() {
             </div>
             <div className="relative w-full h-80 rounded-2xl overflow-hidden order-first lg:order-last">
               <Image
-                src="https://thefks.in/images/fks-force/2.jpeg"
+                src="/2.jpeg"
                 alt="Teachers"
                 fill
                 className="object-cover"
@@ -61,7 +61,7 @@ export default function HeroSection() {
             <div className="grid grid-cols-2 gap-4 w-full h-80">
               <div className="relative w-full h-full rounded-2xl overflow-hidden">
                 <Image
-                  src="https://thefks.in/images/fks-force/Didi%203.JPG"
+                  src="/Didi.jpeg"
                   alt="Support Staff - Didis"
                   fill
                   className="object-cover"
@@ -69,7 +69,7 @@ export default function HeroSection() {
               </div>
               <div className="relative w-full h-full rounded-2xl overflow-hidden">
                 <Image
-                  src="https://thefks.in/images/fks-force/Bhaiyas.JPG"
+                  src="/Bhaiyas.jpeg"
                   alt="Support Staff - Bhaiyas"
                   fill
                   className="object-cover"
@@ -121,7 +121,7 @@ export default function HeroSection() {
             </div>
             <div className="relative w-full h-80 rounded-2xl overflow-hidden order-first lg:order-last">
               <Image
-                src="https://thefks.in/images/fks-force/Parents%20-%20FKS%20Force.JPG"
+                src="/Parents.jpeg"
                 alt="Vision & Mission"
                 fill
                 className="object-cover"
@@ -135,7 +135,7 @@ export default function HeroSection() {
         {/* Image 1 */}
         <div className="relative w-124 h-64 transform -rotate-6 shadow-lg border-4 border-white rounded-lg overflow-hidden">
           <Image
-            src="https://thefks.in/images/fks-force/curvy1.jpg"
+            src="/curvy1.jpg"
             alt="Gallery 1"
             fill
             className="object-cover"
@@ -144,7 +144,7 @@ export default function HeroSection() {
         {/* Image 2 (center, larger) */}
         <div className="relative w-132 h-72 transform rotate-3 shadow-lg border-4 border-white rounded-lg overflow-hidden z-10">
           <Image
-            src="https://thefks.in/images/fks-force/Teachers.JPG"
+            src="/Teachers1.jpeg"
             alt="Gallery 2"
             fill
             className="object-cover"
@@ -153,7 +153,7 @@ export default function HeroSection() {
         {/* Image 3 */}
         <div className="relative w-114 h-64 transform rotate-6 shadow-lg border-4 border-white rounded-lg overflow-hidden">
           <Image
-            src="https://thefks.in/images/fks-force/Didi%20Bhaiyas.JPG"
+            src="/Didi-Bhaiyas.jpeg"
             alt="Gallery 3"
             fill
             className="object-cover"

@@ -11,7 +11,7 @@ export default function HeroSection() {
           {/* Image */}
           <div className="relative w-full h-80 rounded-2xl overflow-hidden">
             <Image
-              src="https://thefks.in/images/mission-and-vision/Philo%202.jpg"
+              src="/Philo.jpg"
               alt="Philosophy"
               fill
               className="object-cover"
@@ -73,7 +73,7 @@ export default function HeroSection() {
           </div>
           <div className="relative w-full h-80 rounded-2xl overflow-hidden order-first lg:order-last">
             <Image
-              src="https://thefks.in/images/mission-and-vision/M&V%202.jpg"
+              src="/M&V2.jpg"
               alt="Vision & Mission"
               fill
               className="object-cover"
