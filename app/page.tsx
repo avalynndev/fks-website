@@ -76,7 +76,7 @@ export default function HomePage() {
               </div>
 
               {/* Playgroups */}
-              <div className="flex-1 border-l">
+              <div className="flex-1 sm:border-l">
                 <div className="bg-green-400 text-blue-900 font-semibold px-3 py-1 rounded mb-2 w-fit mx-auto text-sm">
                   Playgroups
                 </div>
