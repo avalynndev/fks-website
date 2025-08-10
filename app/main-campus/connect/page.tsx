@@ -95,7 +95,7 @@ export default function AdmissionsForm() {
           <form className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="childName">Child's Name*</Label>
+                <Label htmlFor="childName">Child&apos;s Name*</Label>
                 <Input
                   id="childName"
                   required
@@ -128,7 +128,7 @@ export default function AdmissionsForm() {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="fatherName">Father's Name*</Label>
+              <Label htmlFor="fatherName">Father&apos;s Name*</Label>
               <Input
                 id="fatherName"
                 required
@@ -137,29 +137,29 @@ export default function AdmissionsForm() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="fatherEmail">Father's Email*</Label>
+                <Label htmlFor="fatherEmail">Father&apos;s Email*</Label>
                 <Input id="fatherEmail" type="email" required />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="fatherPhone">Father's Mobile No.*</Label>
+                <Label htmlFor="fatherPhone">Father&apos;s Mobile No.*</Label>
                 <Input id="fatherPhone" type="tel" required />
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="fatherOccupation">Father's Occupation*</Label>
+                <Label htmlFor="fatherOccupation">Father&apos;s Occupation*</Label>
                 <Input id="fatherOccupation" required />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="fatherQualification">
-                  Father's Qualification*
+                  Father&apos;s Qualification*
                 </Label>
                 <Input id="fatherQualification" required />
               </div>
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="motherName">Mother's Name*</Label>
+              <Label htmlFor="motherName">Mother&apos;s Name*</Label>
               <Input
                 id="motherName"
                 required
@@ -168,22 +168,22 @@ export default function AdmissionsForm() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="motherEmail">Mother's Email*</Label>
+                <Label htmlFor="motherEmail">Mother&apos;s Email*</Label>
                 <Input id="motherEmail" type="email" required />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="motherPhone">Mother's Mobile No.*</Label>
+                <Label htmlFor="motherPhone">Mother&apos;s Mobile No.*</Label>
                 <Input id="motherPhone" type="tel" required />
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="motherOccupation">Mother's Occupation*</Label>
+                <Label htmlFor="motherOccupation">Mother&apos;s Occupation*</Label>
                 <Input id="motherOccupation" required />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="motherQualification">
-                  Mother's Qualification*
+                  Mother&apos;s Qualification*
                 </Label>
                 <Input id="motherQualification" required />
               </div>
