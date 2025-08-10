@@ -147,7 +147,9 @@ export default function AdmissionsForm() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="fatherOccupation">Father&apos;s Occupation*</Label>
+                <Label htmlFor="fatherOccupation">
+                  Father&apos;s Occupation*
+                </Label>
                 <Input id="fatherOccupation" required />
               </div>
               <div className="space-y-2">
@@ -178,7 +180,9 @@ export default function AdmissionsForm() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="motherOccupation">Mother&apos;s Occupation*</Label>
+                <Label htmlFor="motherOccupation">
+                  Mother&apos;s Occupation*
+                </Label>
                 <Input id="motherOccupation" required />
               </div>
               <div className="space-y-2">
@@ -225,7 +229,7 @@ export default function AdmissionsForm() {
       </div>
       <section className="container max-w-container relative md:py-10 mx-auto rounded-3xl overflow-hidden">
         <GoogleMapsEmbed
-          apiKey="AIzaSyAfIe2bbMoSlbcinRAz-5uRqBGs7zf6Ih8"
+          apiKey="AIzaSyCfMS7tLTo3CJUo96zYYRSo6HUiAWZbT7Q"
           height={400}
           width="100%"
           mode="place"
