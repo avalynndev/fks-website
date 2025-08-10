@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { ReactNode } from "react";
 
-import { Item, ItemDescription,ItemIcon, ItemTitle } from "../../ui/item";
+import { Item, ItemDescription, ItemIcon, ItemTitle } from "../../ui/item";
 import { Section } from "../../ui/section";
 
 interface ItemProps {
