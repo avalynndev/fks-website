@@ -46,6 +46,7 @@ export default function RootLayout({
         <div className="relative mx-auto max-w-6xl h-[500px] rounded-3xl overflow-hidden">
           {/* Background Image changes per page */}
           <FadeImage
+            key={pathname} 
             src={activeItem.img}
             alt={activeItem.name}
             fill
