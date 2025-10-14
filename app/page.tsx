@@ -9,7 +9,6 @@ export default function HomePage() {
 
   return (
     <div className="relative min-h-screen flex flex-col">
-      {/* Background image with mask and overlay */}
       <div className="absolute inset-0 -z-10">
         <div className="w-full h-full blur-sm" />
         <div className="absolute inset-0 bg-background/80" />
@@ -38,7 +37,6 @@ export default function HomePage() {
         )}
       </div>
 
-      {/* Main content section */}
       <main className="flex-1 flex flex-col lg:flex-row items-center justify-center gap-12 px-6 md:px-12 py-12">
         <div className="flex flex-col items-center lg:items-start lg:w-1/2 max-w-lg">
           <div className="mb-4">
@@ -46,8 +44,12 @@ export default function HomePage() {
               src="/fks-logo.png"
               alt="The Future Kid's School Logo"
               width={300}
-              height={140}
-              className="mx-auto lg:mx-0"
+              height={120}
+              className={`mx-auto lg:mx-0 flex transition-opacity duration-700 ${
+                loaded ? "opacity-100" : "opacity-0"
+              }`}
+              onLoad={() => setLoaded(true)}
+              priority
             />
           </div>
 
@@ -164,7 +166,7 @@ I am the infinite reality!`}
       </div>
 
       {/* Footer */}
-      <footer className="w-full flex items-center justify-between text-sm backdrop-blur-md px-4 py-3">
+      <footer className="w-full flex items-center justify-between text-sm backdrop-blur-md px-4 py-3 text-white">
         <div>© 2021 The Future Kid&apos;s School.</div>
         <ModeToggle />
       </footer>
