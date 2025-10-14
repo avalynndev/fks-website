@@ -1,9 +1,12 @@
 "use client";
+import { useState } from "react";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import Image from "next/image";
 import { Link } from "next-view-transitions";
 
 export default function HomePage() {
+  const [loaded, setLoaded] = useState(false);
+
   return (
     <div className="relative min-h-screen flex flex-col">
       {/* Background image with mask and overlay */}
@@ -14,16 +17,25 @@ export default function HomePage() {
           src="/Laptop-PC.2edd87aef5d6c2793b90.png"
           alt="Students laptop bg"
           fill
-          className="object-cover lg:flex hidden"
+          className={`object-cover lg:flex hidden transition-opacity duration-700 ${
+            loaded ? "opacity-100" : "opacity-0"
+          }`}
+          onLoad={() => setLoaded(true)}
           priority
         />
         <Image
           src="/mobile.c5f75c33dc61a1770533.png"
           alt="Students mobile bg"
           fill
-          className="object-cover lg:hidden flex"
+          className={`object-cover lg:hidden flex transition-opacity duration-700 ${
+            loaded ? "opacity-100" : "opacity-0"
+          }`}
+          onLoad={() => setLoaded(true)}
           priority
         />
+        {!loaded && (
+          <div className="absolute inset-0 bg-gray-100 animate-pulse" />
+        )}
       </div>
 
       {/* Main content section */}
@@ -34,7 +46,7 @@ export default function HomePage() {
               src="/fks-logo.png"
               alt="The Future Kid's School Logo"
               width={300}
-              height={280}
+              height={140}
               className="mx-auto lg:mx-0"
             />
           </div>
