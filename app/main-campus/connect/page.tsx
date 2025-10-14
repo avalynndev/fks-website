@@ -20,13 +20,13 @@ import {
   TableBody,
   TableCell,
 } from "@/components/ui/table";
-import Image from "next/image";
+import FadeImage from "@/components/ui/fade-image";
 
 export default function AdmissionsForm() {
   return (
     <div>
       <div className="relative mx-auto max-w-7xl h-[500px] rounded-3xl overflow-hidden">
-        <Image
+        <FadeImage
           src="/Contact-us-Cover.jpeg"
           alt="Connect"
           fill

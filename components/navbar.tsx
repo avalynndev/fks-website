@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "next-view-transitions";
-import Image from "next/image";
+import FadeImage from "@/components/ui/fade-image";
 import {
   Sheet,
   SheetTrigger,
@@ -28,7 +28,7 @@ const Navbar = () => (
               href="/"
               className="flex items-center gap-2 text-xl font-bold"
             >
-              <Image
+              <FadeImage
                 src="/logo.svg"
                 alt="Future Kids School Logo"
                 width={48}
@@ -94,7 +94,7 @@ const Navbar = () => (
                         href="/"
                         className="flex items-center gap-2 text-xl font-bold mb-6"
                       >
-                        <Image
+                        <FadeImage
                           src="/logo.svg"
                           alt="Future Kids School Logo"
                           width={32}

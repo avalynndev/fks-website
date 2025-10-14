@@ -1,6 +1,6 @@
 "use client";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
+import FadeImage from "@/components/ui/fade-image";
 import { Link } from "next-view-transitions";
 
 const menuItems = [
@@ -45,7 +45,7 @@ export default function RootLayout({
       <section className="py-10">
         <div className="relative mx-auto max-w-6xl h-[500px] rounded-3xl overflow-hidden">
           {/* Background Image changes per page */}
-          <Image
+          <FadeImage
             src={activeItem.img}
             alt={activeItem.name}
             fill
@@ -63,11 +63,10 @@ export default function RootLayout({
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className={`cursor-pointer hover:underline ${
-                        isActive
-                          ? item.color || "text-blue-700 font-semibold"
-                          : "text-blue-700"
-                      }`}
+                      className={`cursor-pointer hover:underline ${isActive
+                        ? item.color || "text-blue-700 font-semibold"
+                        : "text-blue-700"
+                        }`}
                     >
                       {item.name}
                     </Link>

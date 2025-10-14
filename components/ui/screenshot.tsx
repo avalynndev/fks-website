@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import FadeImage from "@/components/ui/fade-image";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
@@ -43,7 +43,7 @@ export default function Screenshot({
   }
 
   return (
-    <Image
+    <FadeImage
       src={src}
       alt={alt}
       width={width}

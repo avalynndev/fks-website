@@ -9,7 +9,7 @@ import {
   FooterContent,
 } from "../../ui/footer";
 import { ModeToggle } from "../../ui/mode-toggle";
-import Image from "next/image";
+import FadeImage from "@/components/ui/fade-image";
 import { Link } from "next-view-transitions";
 
 interface FooterLink {
@@ -34,7 +34,7 @@ interface FooterProps {
 
 export default function FooterSection({
   logo = (
-    <Image
+    <FadeImage
       src="/logo.svg"
       alt="Future Kids School Logo"
       width={48}

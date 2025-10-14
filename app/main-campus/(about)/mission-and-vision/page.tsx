@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import FadeImage from "@/components/ui/fade-image";
 
 export default function HeroSection() {
   return (
@@ -10,7 +10,7 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center border border-border/50 bg-card/30 p-8 shadow-lg rounded-3xl">
           {/* Image */}
           <div className="relative w-full h-80 rounded-2xl overflow-hidden">
-            <Image
+            <FadeImage
               src="/Philo.jpg"
               alt="Philosophy"
               fill
@@ -72,7 +72,7 @@ export default function HeroSection() {
             </p>
           </div>
           <div className="relative w-full h-80 rounded-2xl overflow-hidden order-first lg:order-last">
-            <Image
+            <FadeImage
               src="/M&V2.jpg"
               alt="Vision & Mission"
               fill

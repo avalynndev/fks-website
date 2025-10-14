@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import FadeImage from "@/components/ui/fade-image";
 
 export default function HeroSection() {
   return (
@@ -10,7 +10,7 @@ export default function HeroSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center border border-border/50 bg-card/30 p-8 shadow-lg rounded-3xl">
             {/* Image */}
             <div className="relative w-full h-80 rounded-2xl overflow-hidden">
-              <Image
+              <FadeImage
                 src="/Teachers.jpeg"
                 alt="Fks Force"
                 fill
@@ -47,7 +47,7 @@ export default function HeroSection() {
               </p>
             </div>
             <div className="relative w-full h-80 rounded-2xl overflow-hidden order-first lg:order-last">
-              <Image
+              <FadeImage
                 src="/2.jpeg"
                 alt="Teachers"
                 fill
@@ -60,7 +60,7 @@ export default function HeroSection() {
             {/* Images */}
             <div className="grid grid-cols-2 gap-4 w-full h-80">
               <div className="relative w-full h-full rounded-2xl overflow-hidden">
-                <Image
+                <FadeImage
                   src="/Didi.jpeg"
                   alt="Support Staff - Didis"
                   fill
@@ -68,7 +68,7 @@ export default function HeroSection() {
                 />
               </div>
               <div className="relative w-full h-full rounded-2xl overflow-hidden">
-                <Image
+                <FadeImage
                   src="/Bhaiyas.jpeg"
                   alt="Support Staff - Bhaiyas"
                   fill
@@ -120,7 +120,7 @@ export default function HeroSection() {
               </p>
             </div>
             <div className="relative w-full h-80 rounded-2xl overflow-hidden order-first lg:order-last">
-              <Image
+              <FadeImage
                 src="/Parents.jpeg"
                 alt="Vision & Mission"
                 fill
@@ -134,7 +134,7 @@ export default function HeroSection() {
       <div className="mt-12 flex justify-center items-center gap-6">
         {/* Image 1 */}
         <div className="relative w-124 h-64 transform -rotate-6 shadow-lg border-4 border-white rounded-lg overflow-hidden">
-          <Image
+          <FadeImage
             src="/curvy1.jpg"
             alt="Gallery 1"
             fill
@@ -143,7 +143,7 @@ export default function HeroSection() {
         </div>
         {/* Image 2 (center, larger) */}
         <div className="relative w-132 h-72 transform rotate-3 shadow-lg border-4 border-white rounded-lg overflow-hidden z-10">
-          <Image
+          <FadeImage
             src="/Teachers1.jpeg"
             alt="Gallery 2"
             fill
@@ -152,7 +152,7 @@ export default function HeroSection() {
         </div>
         {/* Image 3 */}
         <div className="relative w-114 h-64 transform rotate-6 shadow-lg border-4 border-white rounded-lg overflow-hidden">
-          <Image
+          <FadeImage
             src="/Didi-Bhaiyas.jpeg"
             alt="Gallery 3"
             fill

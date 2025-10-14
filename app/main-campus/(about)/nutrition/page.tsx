@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import FadeImage from "@/components/ui/fade-image";
 
 export default function HeroSection() {
   return (
@@ -39,7 +39,7 @@ export default function HeroSection() {
       <div className="mt-12 flex justify-center items-center gap-6">
         {/* Image 1 */}
         <div className="relative w-124 h-64 transform -rotate-6 shadow-lg border-4 border-white rounded-lg overflow-hidden">
-          <Image
+          <FadeImage
             src="/Food.jpeg"
             alt="Gallery 1"
             fill
@@ -48,7 +48,7 @@ export default function HeroSection() {
         </div>
         {/* Image 2 (center, larger) */}
         <div className="relative w-132 h-72 transform rotate-3 shadow-lg border-4 border-white rounded-lg overflow-hidden z-10">
-          <Image
+          <FadeImage
             src="/Food-gallery.jpg"
             alt="Gallery 2"
             fill

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { ModeToggle } from "@/components/ui/mode-toggle";
-import Image from "next/image";
+import FadeImage from "@/components/ui/fade-image";
 import { Link } from "next-view-transitions";
 
 export default function HomePage() {
@@ -12,23 +12,19 @@ export default function HomePage() {
       <div className="absolute inset-0 -z-10">
         <div className="w-full h-full blur-sm" />
         <div className="absolute inset-0 bg-background/80" />
-        <Image
+        <FadeImage
           src="/Laptop-PC.2edd87aef5d6c2793b90.png"
           alt="Students laptop bg"
           fill
-          className={`object-cover lg:flex hidden transition-opacity duration-700 ${
-            loaded ? "opacity-100" : "opacity-0"
-          }`}
+          className={`object-cover lg:flex hidden`}
           onLoad={() => setLoaded(true)}
           priority
         />
-        <Image
+        <FadeImage
           src="/mobile.c5f75c33dc61a1770533.png"
           alt="Students mobile bg"
           fill
-          className={`object-cover lg:hidden flex transition-opacity duration-700 ${
-            loaded ? "opacity-100" : "opacity-0"
-          }`}
+          className={`object-cover lg:hidden flex`}
           onLoad={() => setLoaded(true)}
           priority
         />
@@ -40,14 +36,12 @@ export default function HomePage() {
       <main className="flex-1 flex flex-col lg:flex-row items-center justify-center gap-12 px-6 md:px-12 py-12">
         <div className="flex flex-col items-center lg:items-start lg:w-1/2 max-w-lg">
           <div className="mb-4">
-            <Image
+            <FadeImage
               src="/fks-logo.png"
               alt="The Future Kid's School Logo"
               width={300}
               height={120}
-              className={`mx-auto lg:mx-0 flex transition-opacity duration-700 ${
-                loaded ? "opacity-100" : "opacity-0"
-              }`}
+              className={`mx-auto lg:mx-0 flex`}
               onLoad={() => setLoaded(true)}
               priority
             />
