@@ -42,7 +42,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="mt-12 flex justify-center items-center gap-6">
+        <div className="my-12 flex justify-center items-center gap-6">
           {/* Image 1 */}
           <div className="relative w-124 h-64 transform -rotate-6 shadow-lg border-4 border-white rounded-lg overflow-hidden">
             <FadeImage

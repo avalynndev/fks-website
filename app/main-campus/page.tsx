@@ -152,7 +152,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section with Carousel */}
-      <section className="container max-w-container relative md:py-10 mx-auto rounded-3xl overflow-hidden">
+      <section className="container max-w-container relative md:pb-10 lg:pt-10 mx-auto rounded-3xl overflow-hidden">
         <Carousel
           setApi={setApi}
           className="h-[80vh] min-h-[600px] w-full rounded-3xl overflow-hidden"
@@ -296,10 +296,11 @@ export default function HomePage() {
               {Array.from({ length: count }).map((_, index) => (
                 <button
                   key={index}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${current === index + 1
-                    ? "bg-primary scale-125"
-                    : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
-                    }`}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    current === index + 1
+                      ? "bg-primary scale-125"
+                      : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                  }`}
                   onClick={() => handleDotClick(index)}
                   aria-label={`Go to slide ${index + 1}`}
                 />
@@ -314,10 +315,11 @@ export default function HomePage() {
                 {Array.from({ length: count }).map((_, index) => (
                   <div
                     key={index}
-                    className={`h-1 rounded-full transition-all duration-300 ${current === index + 1
-                      ? "bg-primary w-8"
-                      : "bg-muted-foreground/30 w-4"
-                      }`}
+                    className={`h-1 rounded-full transition-all duration-300 ${
+                      current === index + 1
+                        ? "bg-primary w-8"
+                        : "bg-muted-foreground/30 w-4"
+                    }`}
                   />
                 ))}
               </div>
@@ -338,7 +340,7 @@ export default function HomePage() {
                 that instilled integrity.
               </p>
               <Link
-                href="/about"
+                href="/main-campus/our-story"
                 className="inline-flex items-center gap-2 text-primary font-semibold hover:underline transition-colors"
               >
                 Know More <ArrowRight className="w-4 h-4" />
@@ -363,7 +365,7 @@ export default function HomePage() {
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold">
               Foundation of FKS Pedagogy is the
-              <span className="text-primary">3Es</span>
+              <span className="text-primary">{" "}3Es</span>
             </h2>
             <p className="text-lg text-muted-foreground">
               Experience the difference that quality education makes in shaping
@@ -375,10 +377,11 @@ export default function HomePage() {
                 <div
                   key={idx}
                   onClick={() => setActiveIndex(idx)}
-                  className={`p-4 rounded-xl border cursor-pointer transition-all hover:-translate-y-1 ${activeIndex === idx
-                    ? "bg-primary/10 border-primary"
-                    : "bg-card/40 border-border/50"
-                    }`}
+                  className={`p-4 rounded-xl border cursor-pointer transition-all hover:-translate-y-1 ${
+                    activeIndex === idx
+                      ? "bg-primary/10 border-primary"
+                      : "bg-card/40 border-border/50"
+                  }`}
                 >
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 aspect-square rounded-full flex items-center justify-center bg-gradient-to-br from-primary/20 to-primary/10 shrink-0">
@@ -457,8 +460,8 @@ export default function HomePage() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white shadow-md z-10 md:left-4" />
-              <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white shadow-md z-10 md:right-4" />
+              <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-background dark:bg-background/70 shadow-md z-10 md:left-4" />
+              <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-background dark:bg-background/70 shadow-md z-10 md:right-4" />
             </Carousel>
           </div>
         </div>
@@ -512,8 +515,8 @@ export default function HomePage() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white shadow-md z-10 md:left-4" />
-              <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white shadow-md z-10 md:right-4" />
+              <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-background dark:bg-background/70 shadow-md z-10 md:left-4" />
+              <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-background dark:bg-background/70 shadow-md z-10 md:right-4" />
             </Carousel>
           </div>
         </div>

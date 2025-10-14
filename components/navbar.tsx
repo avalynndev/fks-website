@@ -26,7 +26,7 @@ const Navbar = () => (
           >
             <Link
               href="/"
-              className="flex items-center gap-2 text-xl font-bold"
+              className="flex items-center gap-2 text-md md:text-xl font-bold"
             >
               <FadeImage
                 src="/logo.svg"
@@ -44,14 +44,14 @@ const Navbar = () => (
           >
             <Link
               href={authLinks.signIn.href}
-              className="hidden text-sm lg:block pointer-events-none"
+              className="hidden text-sm lg:block"
             >
               {authLinks.signIn.label}
             </Link>
             <Link
               href={authLinks.getStarted.href}
               data-slot="button"
-              className="inline-flex pointer-events-none items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground shadow-sm dark:hover:from-primary/80 hover:from-primary/70 dark:hover:to-primary/70 hover:to-primary/90 bg-linear-to-b from-primary/60 to-primary/100 dark:from-primary/100 dark:to-primary/70 border-t-primary h-9 px-4 py-2"
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground shadow-sm dark:hover:from-primary/80 hover:from-primary/70 dark:hover:to-primary/70 hover:to-primary/90 bg-linear-to-b from-primary/60 to-primary/100 dark:from-primary/100 dark:to-primary/70 border-t-primary h-9 px-4 py-2"
             >
               {authLinks.getStarted.label}
             </Link>
@@ -120,13 +120,13 @@ const Navbar = () => (
                     <div className="mt-6 flex flex-col gap-2">
                       <Link
                         href={authLinks.signIn.href}
-                        className="pointer-events-none text-sm"
+                        className=" text-sm"
                       >
                         {authLinks.signIn.label}
                       </Link>
                       <Link
                         href={authLinks.getStarted.href}
-                        className="pointer-events-none inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground shadow-sm dark:hover:from-primary/80 hover:from-primary/70 dark:hover:to-primary/70 hover:to-primary/90 bg-linear-to-b from-primary/60 to-primary/100 dark:from-primary/100 dark:to-primary/70 border-t-primary h-9 px-4 py-2"
+                        className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground shadow-sm dark:hover:from-primary/80 hover:from-primary/70 dark:hover:to-primary/70 hover:to-primary/90 bg-linear-to-b from-primary/60 to-primary/100 dark:from-primary/100 dark:to-primary/70 border-t-primary h-9 px-4 py-2"
                       >
                         {authLinks.getStarted.label}
                       </Link>

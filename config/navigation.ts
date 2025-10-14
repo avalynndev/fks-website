@@ -9,20 +9,20 @@ export const navigationLinks: NavigationLink[] = [
     href: "/main-campus/our-story",
     label: "About Us",
   },
-  /*
   {
     href: "/main-campus/board-and-curriculum",
     label: "Learning at FKS",
   },
-  {
+  /**
+  *  {
     href: "/main-campus/leadership",
     label: "Beyond Learning",
   },
+  */
   {
     href: "/main-campus/campus",
     label: "Campus",
   },
-  */
   {
     href: "/main-campus/connect",
     label: "Get In Touch",
@@ -31,11 +31,11 @@ export const navigationLinks: NavigationLink[] = [
 
 export const authLinks = {
   signIn: {
-    href: "/signin",
-    label: "Sign in",
+    href: "/",
+    label: "Log in",
   },
   getStarted: {
-    href: "/get-started",
-    label: "Get Started",
+    href: "/",
+    label: "Button",
   },
 };

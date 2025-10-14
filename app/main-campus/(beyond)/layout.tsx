@@ -5,28 +5,34 @@ import { Link } from "next-view-transitions";
 
 const menuItems = [
   {
-    name: "Our Story",
-    href: "/main-campus/our-story",
+    name: "Leadership at FKS",
+    href: "/main-campus/leadership",
     color: "text-green-600",
-    img: "/Our-Story-Banner.jpg",
+    img: "/leadership.jpg",
   },
   {
-    name: "FKS Perspective - Philosophy, Vision & Mission",
-    href: "/main-campus/mission-and-vision",
+    name: "Sports, Games & Physical Activities",
+    href: "/main-campus/sports-games",
     color: "text-green-600",
-    img: "/M&V-Banner.jpg",
+    img: "/sport.jpg",
   },
   {
-    name: "FKS Force",
-    href: "/main-campus/fks-force",
+    name: "Events & Festivals",
+    href: "/main-campus/events-and-festivals",
     color: "text-green-600",
-    img: "/banner1.jpg",
+    img: "/events.png",
   },
   {
-    name: "Nutrition",
-    href: "/main-campus/nutrition",
+    name: "Performing Art",
+    href: "/main-campus/theatre-and-drama",
     color: "text-green-600",
-    img: "/Idli.jpeg",
+    img: "/per.jpg",
+  },
+  {
+    name: "Field Trips",
+    href: "/main-campus/field-trips",
+    color: "text-green-600",
+    img: "/trip.jpg",
   },
 ];
 
@@ -44,7 +50,6 @@ export default function RootLayout({
     <>
       <section className="py-10">
         <div className="relative mx-auto max-w-6xl h-[500px] rounded-3xl overflow-hidden">
-          {/* Background Image changes per page */}
           <FadeImage
             key={pathname}
             src={activeItem.img}
@@ -54,10 +59,9 @@ export default function RootLayout({
             className="object-cover"
           />
 
-          {/* Overlay content */}
           <div className="absolute bottom-8 left-8 bg-white/70 backdrop-blur-md rounded-3xl p-6 max-w-xs">
             <h2 className="text-xl font-semibold mb-4 dark:text-background">
-              About Us
+              Beyond Learning
             </h2>
             <ul className="space-y-2 text-sm">
               {menuItems.map((item) => {

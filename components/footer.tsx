@@ -2,13 +2,8 @@ import { ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
 
-import {
-  Footer,
-  FooterBottom,
-  FooterColumn,
-  FooterContent,
-} from "../../ui/footer";
-import { ModeToggle } from "../../ui/mode-toggle";
+import { Footer, FooterBottom, FooterColumn, FooterContent } from "./ui/footer";
+import { ModeToggle } from "./ui/mode-toggle";
 import FadeImage from "@/components/ui/fade-image";
 import { Link } from "next-view-transitions";
 
@@ -47,9 +42,9 @@ export default function FooterSection({
       title: "Links",
       links: [
         { text: "Home", href: "/" },
-        { text: "Admissions", href: "/connect" },
-        { text: "Nutrition", href: "/nutrition" },
-        { text: "Campus", href: "/campus" },
+        { text: "Admissions", href: "/main-campus/connect" },
+        { text: "Nutrition", href: "/main-campus/nutrition" },
+        { text: "Campus", href: "/main-campus/campus" },
       ],
     },
   ],
