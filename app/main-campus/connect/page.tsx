@@ -90,7 +90,7 @@ export default function AdmissionsForm() {
             </Table>
           </div>
         </div>
-        <div className="border border-muted bg-background p-8 shadow-md rounded-2xl space-y-6">
+        <div className="border border-muted p-8 shadow-md rounded-2xl space-y-6">
           <h2 className="text-2xl font-bold text-primary">ADMISSIONS FORM</h2>
           <form className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
