@@ -8,7 +8,6 @@ export default function ComparePDFsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
-
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-7xl">
         {/* PDF 1 */}
         <div className="bg-white rounded-2xl shadow-md p-2">

@@ -118,10 +118,7 @@ const Navbar = () => (
                       ))}
                     </ul>
                     <div className="mt-6 flex flex-col gap-2">
-                      <Link
-                        href={authLinks.signIn.href}
-                        className=" text-sm"
-                      >
+                      <Link href={authLinks.signIn.href} className=" text-sm">
                         {authLinks.signIn.label}
                       </Link>
                       <Link

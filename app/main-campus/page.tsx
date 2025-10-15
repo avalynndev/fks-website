@@ -365,7 +365,7 @@ export default function HomePage() {
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold">
               Foundation of FKS Pedagogy is the
-              <span className="text-primary">{" "}3Es</span>
+              <span className="text-primary"> 3Es</span>
             </h2>
             <p className="text-lg text-muted-foreground">
               Experience the difference that quality education makes in shaping

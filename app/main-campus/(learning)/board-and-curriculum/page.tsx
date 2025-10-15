@@ -13,8 +13,9 @@ export default function HeroSection() {
               BOARD & CURRICULUM
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              "If an egg is broken by an outside force, life ends. If broken by
-              force within, life begins. Great things always begin from within."
+              &quot;If an egg is broken by an outside force, life ends. If
+              broken by force within, life begins. Great things always begin
+              from within.&quot;
               <br />
               <br />
               Our lessons are based on the CICSE board recommendations, but not

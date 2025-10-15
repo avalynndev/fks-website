@@ -86,7 +86,7 @@ export default function HeroSection() {
           {/* LEFT SIDE: TEXT */}
           <div className="space-y-6">
             <p className="text-muted-foreground leading-relaxed">
-              The FKS approach caters to different kinds of learners. It's
+              The FKS approach caters to different kinds of learners. It&apos;s
               highly flexible, comprehensive, relatable and hands on! FKS
               believes in an inclusive approach. The Special ED team constantly
               enhances the programme.
@@ -120,12 +120,7 @@ export default function HeroSection() {
               />
             </div>
             <div className="relative w-full h-64 rounded-lg overflow-hidden shadow-lg transform -rotate-1">
-              <FadeImage
-                src="/9.jpg"
-                alt="2"
-                fill
-                className="object-cover"
-              />
+              <FadeImage src="/9.jpg" alt="2" fill className="object-cover" />
             </div>
           </div>
         </div>
@@ -137,12 +132,12 @@ export default function HeroSection() {
             </h2>
             <div className="text-lg leading-relaxed space-y-4">
               <p>
-                Even before the world acknowledged, The Future Kid's Philosophy
-                was always inclusive. The Special Ed Team along with the
-                teaching faculty designs an intensive remedial program that is
-                tailor made to suit the diverse learning needs, to consolidate
-                their knowledge, strengthen their confidence & enhance the
-                effectiveness of learning.
+                Even before the world acknowledged, The Future Kid&apos;s
+                Philosophy was always inclusive. The Special Ed Team along with
+                the teaching faculty designs an intensive remedial program that
+                is tailor made to suit the diverse learning needs, to
+                consolidate their knowledge, strengthen their confidence &
+                enhance the effectiveness of learning.
               </p>
             </div>
           </div>

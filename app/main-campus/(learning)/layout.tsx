@@ -48,7 +48,9 @@ export default function RootLayout({
           />
 
           <div className="absolute bottom-8 left-8 bg-white/70 backdrop-blur-md rounded-3xl p-6 max-w-xs">
-            <h2 className="text-xl font-semibold mb-4 dark:text-background">Learning at FKS</h2>
+            <h2 className="text-xl font-semibold mb-4 dark:text-background">
+              Learning at FKS
+            </h2>
             <ul className="space-y-2 text-sm">
               {menuItems.map((item) => {
                 const isActive = pathname === item.href;

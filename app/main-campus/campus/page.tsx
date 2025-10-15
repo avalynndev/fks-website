@@ -5,77 +5,75 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
 import FadeImage from "@/components/ui/fade-image";
 
 export default function AdmissionsForm() {
-      const [api, setApi] = React.useState<CarouselApi>();
-      const [current, setCurrent] = React.useState(0);
-      const [count, setCount] = React.useState(0);
-      const intervalRef = React.useRef<NodeJS.Timeout | null>(null);
+  const [api, setApi] = React.useState<CarouselApi>();
+  const [current, setCurrent] = React.useState(0);
+  const [count, setCount] = React.useState(0);
+  const intervalRef = React.useRef<NodeJS.Timeout | null>(null);
 
-      React.useEffect(() => {
-        if (!api) return;
+  React.useEffect(() => {
+    if (!api) return;
 
-        setCount(api.scrollSnapList().length);
-        setCurrent(api.selectedScrollSnap() + 1);
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
 
-        api.on("select", () => {
-          setCurrent(api.selectedScrollSnap() + 1);
-        });
-      }, [api]);
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
 
-      // Auto-play functionality with reset capability
-      const startAutoPlay = React.useCallback(() => {
-        if (intervalRef.current) {
-          clearInterval(intervalRef.current);
-        }
+  // Auto-play functionality with reset capability
+  const startAutoPlay = React.useCallback(() => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
 
-        intervalRef.current = setInterval(() => {
-          if (api) {
-            api.scrollNext();
-          }
-        }, 6000);
-      }, [api]);
+    intervalRef.current = setInterval(() => {
+      if (api) {
+        api.scrollNext();
+      }
+    }, 6000);
+  }, [api]);
 
-      const resetAutoPlay = React.useCallback(() => {
-        startAutoPlay();
-      }, [startAutoPlay]);
+  const resetAutoPlay = React.useCallback(() => {
+    startAutoPlay();
+  }, [startAutoPlay]);
 
-      React.useEffect(() => {
-        if (!api) return;
-        startAutoPlay();
+  React.useEffect(() => {
+    if (!api) return;
+    startAutoPlay();
 
-        return () => {
-          if (intervalRef.current) {
-            clearInterval(intervalRef.current);
-          }
-        };
-      }, [api, startAutoPlay]);
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [api, startAutoPlay]);
 
-      const handlePrevious = () => {
-        if (api) {
-          api.scrollPrev();
-          resetAutoPlay();
-        }
-      };
+  const handlePrevious = () => {
+    if (api) {
+      api.scrollPrev();
+      resetAutoPlay();
+    }
+  };
 
-      const handleNext = () => {
-        if (api) {
-          api.scrollNext();
-          resetAutoPlay();
-        }
-      };
+  const handleNext = () => {
+    if (api) {
+      api.scrollNext();
+      resetAutoPlay();
+    }
+  };
 
-      const handleDotClick = (index: number) => {
-        if (api) {
-          api.scrollTo(index);
-          resetAutoPlay();
-        }
-      };
+  const handleDotClick = (index: number) => {
+    if (api) {
+      api.scrollTo(index);
+      resetAutoPlay();
+    }
+  };
   return (
     <div>
       <div className="relative mx-auto max-w-7xl h-[500px] rounded-3xl overflow-hidden">

@@ -2,31 +2,31 @@
 
 import FadeImage from "@/components/ui/fade-image";
 export default function HeroSection() {
-      const lifeSkills = [
-        { name: "Life Skills", icon: "/life-skills.png" },
-        { name: "Critical Thinking", icon: "/critical-thinking.png" },
-        {
-          name: "Creative Thinking & Writing",
-          icon: "/creative-thinking-and-writing.png",
-        },
-        { name: "Reading Programme", icon: "/reading-programme.png" },
-        {
-          name: "Effective Communication",
-          icon: "/effective-communication.png",
-        },
-        { name: "Funtoot Online Math Programme", icon: "/funtoot.png" },
-      ];
+  const lifeSkills = [
+    { name: "Life Skills", icon: "/life-skills.png" },
+    { name: "Critical Thinking", icon: "/critical-thinking.png" },
+    {
+      name: "Creative Thinking & Writing",
+      icon: "/creative-thinking-and-writing.png",
+    },
+    { name: "Reading Programme", icon: "/reading-programme.png" },
+    {
+      name: "Effective Communication",
+      icon: "/effective-communication.png",
+    },
+    { name: "Funtoot Online Math Programme", icon: "/funtoot.png" },
+  ];
 
-      const specialClubs = [
-        {
-          name: "Logical & Analytical Skills",
-          icon: "/logical-and-analytical-skills.png",
-        },
-        { name: "Spell Fun", icon: "/spell-fun.png" },
-        { name: "Memory Enhancement", icon: "/memory-enhancement.png" },
-        { name: "General Knowledge", icon: "/general-knowledge.png" },
-        { name: "Arts", icon: "/arts.png" },
-      ];
+  const specialClubs = [
+    {
+      name: "Logical & Analytical Skills",
+      icon: "/logical-and-analytical-skills.png",
+    },
+    { name: "Spell Fun", icon: "/spell-fun.png" },
+    { name: "Memory Enhancement", icon: "/memory-enhancement.png" },
+    { name: "General Knowledge", icon: "/general-knowledge.png" },
+    { name: "Arts", icon: "/arts.png" },
+  ];
   return (
     <>
       <div className="max-w-6xl mx-auto">

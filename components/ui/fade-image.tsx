@@ -4,33 +4,33 @@ import Image, { ImageProps } from "next/image";
 import React from "react";
 
 type FadeImageProps = ImageProps & {
-    enableSkeleton?: boolean;
-    fadeDurationMs?: number;
+  fadeDurationMs?: number;
 };
 
 export default function FadeImage({
-    className,
-    enableSkeleton = true,
-    fadeDurationMs = 700,
-    ...props
+  className,
+  fadeDurationMs = 700,
+  ...props
 }: FadeImageProps) {
-    const [isLoaded, setIsLoaded] = React.useState(false);
+  const [isLoaded, setIsLoaded] = React.useState(false);
 
-    const transitionClasses = `transition-opacity duration-[${fadeDurationMs}ms] ${isLoaded ? "opacity-100" : "opacity-0"
-        }`;
+  const transitionClasses = `transition-opacity duration-[${fadeDurationMs}ms] ${
+    isLoaded ? "opacity-100" : "opacity-0"
+  }`;
 
-    return (
-        <>
-            <Image
-                {...props}
-                className={className ? `${className} ${transitionClasses}` : transitionClasses}
-                onLoad={(e) => {
-                    setIsLoaded(true);
-                    if (props.onLoad) props.onLoad(e);
-                }}
-            />
-        </>
-    );
+  return (
+    <>
+      <Image
+        {...props}
+        className={
+          className ? `${className} ${transitionClasses}` : transitionClasses
+        }
+        alt={props.alt || ""}
+        onLoad={(e) => {
+          setIsLoaded(true);
+          if (props.onLoad) props.onLoad(e);
+        }}
+      />
+    </>
+  );
 }
-
-
