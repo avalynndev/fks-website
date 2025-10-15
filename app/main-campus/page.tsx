@@ -150,7 +150,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen ">
       {/* Hero Section with Carousel */}
       <section className="container max-w-container relative md:pb-10 lg:pt-10 mx-auto rounded-3xl overflow-hidden">
         <Carousel
@@ -359,7 +359,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-gradient-to-b from-background to-background/80">
+      <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left side - Text */}
           <div className="space-y-6">

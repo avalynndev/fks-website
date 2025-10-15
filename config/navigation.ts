@@ -13,12 +13,10 @@ export const navigationLinks: NavigationLink[] = [
     href: "/main-campus/board-and-curriculum",
     label: "Learning at FKS",
   },
-  /**
-  *  {
+  {
     href: "/main-campus/leadership",
     label: "Beyond Learning",
   },
-  */
   {
     href: "/main-campus/campus",
     label: "Campus",

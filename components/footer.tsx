@@ -57,9 +57,9 @@ export default function FooterSection({
   className,
 }: FooterProps) {
   return (
-    <footer className={cn("bg-background w-full px-4", className)}>
+    <footer className={cn("w-full px-4 bg-transparent", className)}>
       <div className="max-w-container mx-auto">
-        <Footer>
+        <Footer className="bg-transparent">
           <FooterContent>
             <FooterColumn className="col-span-2">
               <div className="flex items-center gap-2">

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ViewTransitions } from "next-view-transitions";
+import RouteLoader from "@/components/route-loader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,10 +28,14 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="en" suppressHydrationWarning>
+        <head>
+          <meta name="apple-mobile-web-app-title" content="FKS" />
+        </head>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+            <RouteLoader />
             {children}
           </ThemeProvider>
         </body>

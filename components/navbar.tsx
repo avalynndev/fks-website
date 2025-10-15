@@ -34,7 +34,7 @@ const Navbar = () => (
                 width={48}
                 height={48}
               />
-              Future Kids School
+              <span className="hidden md:inline">Future Kids School</span>
             </Link>
           </nav>
           {/* Right: Auth buttons and hamburger */}
@@ -42,12 +42,13 @@ const Navbar = () => (
             data-slot="navbar-right"
             className="lg:pt-8 flex items-center justify-end gap-4"
           >
-            <Link
+            {/**
+             <Link
               href={authLinks.signIn.href}
               className="hidden text-sm lg:block"
             >
               {authLinks.signIn.label}
-            </Link>
+            </Link>  */}
             <Link
               href={authLinks.getStarted.href}
               data-slot="button"
@@ -55,7 +56,7 @@ const Navbar = () => (
             >
               {authLinks.getStarted.label}
             </Link>
-            {/* Hamburger for mobile */}
+           
             <div className="lg:hidden">
               <Sheet>
                 <SheetTrigger asChild>
@@ -117,7 +118,8 @@ const Navbar = () => (
                         </li>
                       ))}
                     </ul>
-                    <div className="mt-6 flex flex-col gap-2">
+                  {/**
+                     <div className="mt-6 flex flex-col gap-2">
                       <Link href={authLinks.signIn.href} className=" text-sm">
                         {authLinks.signIn.label}
                       </Link>
@@ -128,6 +130,7 @@ const Navbar = () => (
                         {authLinks.getStarted.label}
                       </Link>
                     </div>
+                   */}
                   </nav>
                 </SheetContent>
               </Sheet>
