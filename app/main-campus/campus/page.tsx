@@ -91,7 +91,7 @@ export default function AdmissionsForm() {
             {/* Image */}
             <div className="relative w-full h-80 rounded-2xl overflow-hidden">
               <FadeImage
-                src="/_RA_0254_FKS.jpeg"
+                src="/campus1.jpg"
                 alt="1"
                 fill
                 className="object-cover"
@@ -134,7 +134,27 @@ export default function AdmissionsForm() {
               </p>
             </div>
             <div className="relative w-full h-80 rounded-2xl overflow-hidden order-first lg:order-last">
-              <FadeImage src="/22.jpg" alt="2" fill className="object-cover" />
+              <FadeImage src="/campus2.jpg" alt="2" fill className="object-cover" />
+            </div>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center border border-border/50 bg-card/30 p-8 shadow-lg rounded-3xl">
+            {/* Image */}
+            <div className="relative w-full h-80 rounded-2xl overflow-hidden">
+              <FadeImage
+                src="/22.jpg"
+                alt="1"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            {/* Text */}
+            <div className="space-y-6">
+              <p className="text-muted-foreground leading-relaxed">
+                With the outside world, we are connected through a wide network of school buses and transportation vans and inside, we are connected to one another through a seamless flow of spaces. We boast of a staff-room free school, classrooms with abundant natural light and ventilation and open spaces for children to use freely.
+                <br /> <br />
+                Choosing constructive over the destructive, including over excluding and being environment-friendly, FKS has kept in mind its inhabitants – the children – at the center of its philosophy always – and designed its spaces keeping in mind their age-groups, the climate and the maximum freedom that can be made available to them for their unhindered growth.
+              </p>
             </div>
           </div>
         </div>
