@@ -4,7 +4,7 @@ import FadeImage from "@/components/ui/fade-image";
 
 export default function HeroSection() {
   return (
-    <div className="max-w-6xl mx-auto">
+    <div className="max-w-6xl mx-auto my-12 space-y-10">
       <div className="grid grid-cols-1 gap-8 items-center border border-border/50 bg-card/30 p-8 shadow-lg rounded-3xl">
         <div className="space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold">NUTRITION</h2>

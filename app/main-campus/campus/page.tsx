@@ -75,7 +75,7 @@ export default function AdmissionsForm() {
     }
   };
   return (
-    <div className="py-10">
+    <div className="pb-10 pt-4 px-4">
       <div className="relative mx-auto max-w-7xl h-[500px] rounded-3xl overflow-hidden">
         <FadeImage
           src="/cover-image.jpg"
