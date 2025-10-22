@@ -229,7 +229,7 @@ export default function AdmissionsForm() {
       </div>
       <section className="container max-w-container relative md:py-10 mx-auto rounded-3xl overflow-hidden">
         <GoogleMapsEmbed
-          apiKey="AIzaSyCfMS7tLTo3CJUo96zYYRSo6HUiAWZbT7Q"
+          apiKey={process.env.NEXT_PUBLIC_MAPS_EMBED_KEY || ""}
           height={400}
           width="100%"
           mode="place"
