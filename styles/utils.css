@@ -14,7 +14,6 @@
   @apply border-border border-b-input from-card/100 to-card/20 dark:border-border/10 dark:border-t-border/30 dark:from-primary/15 dark:to-primary/5 border bg-linear-to-b dark:border-b-0;
 }
 
-/* Fade effects */
 @utility fade-x {
   mask-image: linear-gradient(
     to right,

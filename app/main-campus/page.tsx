@@ -100,7 +100,6 @@ export default function HomePage() {
     });
   }, [api]);
 
-  // Auto-play functionality with reset capability
   const startAutoPlay = React.useCallback(() => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
@@ -150,8 +149,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen ">
-      {/* Hero Section with Carousel */}
+    <div className="min-h-screen px-4">
       <section className="container max-w-container relative md:pb-10 lg:pt-10 mx-auto rounded-3xl overflow-hidden">
         <Carousel
           setApi={setApi}
@@ -162,7 +160,6 @@ export default function HomePage() {
           }}
         >
           <CarouselContent className="rounded-3xl">
-            {/* Slide 1: FKS Education Philosophy */}
             <CarouselItem className="rounded-3xl">
               <div className="relative h-[80vh] min-h-[600px] w-full flex items-end rounded-3xl overflow-hidden">
                 <FadeImage
@@ -185,7 +182,6 @@ export default function HomePage() {
               </div>
             </CarouselItem>
 
-            {/* Slide 2: Organic Growth */}
             <CarouselItem className="rounded-3xl">
               <div className="relative h-[80vh] min-h-[600px] w-full flex items-end rounded-3xl overflow-hidden">
                 <FadeImage
@@ -206,7 +202,6 @@ export default function HomePage() {
               </div>
             </CarouselItem>
 
-            {/* Slide 3: Willingness to Learn */}
             <CarouselItem className="rounded-3xl">
               <div className="relative h-[80vh] min-h-[600px] w-full flex items-end rounded-3xl overflow-hidden">
                 <FadeImage
@@ -228,7 +223,6 @@ export default function HomePage() {
               </div>
             </CarouselItem>
 
-            {/* Slide 4: Future Generations */}
             <CarouselItem className="rounded-3xl">
               <div className="relative h-[80vh] min-h-[600px] w-full flex items-end rounded-3xl overflow-hidden">
                 <FadeImage
@@ -251,7 +245,6 @@ export default function HomePage() {
             </CarouselItem>
           </CarouselContent>
 
-          {/* Navigation Arrows with Reset Functionality */}
           <button
             onClick={handlePrevious}
             className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm border border-border/50 hover:bg-background/90 rounded-full p-2 transition-colors"
@@ -290,7 +283,6 @@ export default function HomePage() {
             </svg>
           </button>
 
-          {/* Progress Indicators */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
             <div className="bg-background/80 backdrop-blur-sm border border-border/50 rounded-full p-2 flex space-x-1">
               {Array.from({ length: count }).map((_, index) => (
@@ -308,7 +300,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Progress Bar */}
           <div className="absolute top-4 right-4 z-10">
             <div className="bg-background/80 backdrop-blur-sm border border-border/50 rounded-full p-2">
               <div className="flex space-x-1">
@@ -327,7 +318,6 @@ export default function HomePage() {
           </div>
         </Carousel>
       </section>
-      {/* About FKS Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center border border-border/50 bg-card/30 p-8 shadow-lg rounded-3xl">
@@ -361,7 +351,6 @@ export default function HomePage() {
 
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          {/* Left side - Text */}
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold">
               Foundation of FKS Pedagogy is the
@@ -399,14 +388,13 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right side - Image */}
           <div className="relative w-full h-96 rounded-xl overflow-hidden shadow-lg">
             <FadeImage
               src={sections[activeIndex].image}
               alt={sections[activeIndex].title}
               fill
               className="object-cover transition-opacity duration-500"
-              key={sections[activeIndex].image} // triggers fade change
+              key={sections[activeIndex].image}
             />
           </div>
         </div>

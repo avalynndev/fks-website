@@ -80,10 +80,9 @@ export default function HeroSection() {
             ))}
           </div>
         </section>
-        </div>
+      </div>
 
       <div className="my-12 flex justify-center items-center gap-6">
-        {/* Image 1 */}
         <div className="relative w-124 h-64 transform -rotate-6 shadow-lg border-4 border-white rounded-lg overflow-hidden">
           <FadeImage
             src="/curvy1.jpg"
@@ -92,7 +91,6 @@ export default function HeroSection() {
             className="object-cover"
           />
         </div>
-        {/* Image 2 (center, larger) */}
         <div className="relative w-132 h-72 transform rotate-3 shadow-lg border-4 border-white rounded-lg overflow-hidden z-10">
           <FadeImage
             src="/Teachers1.jpeg"
@@ -101,7 +99,6 @@ export default function HeroSection() {
             className="object-cover"
           />
         </div>
-        {/* Image 3 */}
         <div className="relative w-114 h-64 transform rotate-6 shadow-lg border-4 border-white rounded-lg overflow-hidden">
           <FadeImage
             src="/Didi-Bhaiyas.jpeg"

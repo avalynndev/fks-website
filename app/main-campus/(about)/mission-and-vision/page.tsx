@@ -6,9 +6,7 @@ export default function HeroSection() {
   return (
     <section className="py-20 px-4">
       <div className="max-w-6xl mx-auto space-y-16">
-        {/* PHILOSOPHY */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center border border-border/50 bg-card/30 p-8 shadow-lg rounded-3xl">
-          {/* Image */}
           <div className="relative w-full h-80 rounded-2xl overflow-hidden">
             <FadeImage
               src="/Philo.jpg"
@@ -18,7 +16,6 @@ export default function HeroSection() {
             />
           </div>
 
-          {/* Text */}
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold">PHILOSOPHY</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">

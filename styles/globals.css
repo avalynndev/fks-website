@@ -129,11 +129,8 @@
 }
 
 :root {
-  /* Accent colors */
   --brand: oklch(66.5% 0.1804 47.04);
   --brand-foreground: oklch(75.77% 0.159 55.91);
-
-  /* Customized shadcn/ui colors */
   --background: oklch(0.9529 0.0146 102.4597);
   --foreground: oklch(0.4063 0.0255 40.3627);
   --card: oklch(0.9529 0.0146 102.4597);
@@ -190,22 +187,15 @@
   --shadow-2xl: 2px 2px 0px 0px hsl(20 18% 51% / 0.28);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
-
-  /* Illustrations colors */
   --light: var(--brand);
   --light-foreground: var(--brand-foreground);
-
-  /* Shadows */
   --shadow: #00000008;
   --shadow-strong: #00000008;
 }
 
 .dark {
-  /* Accent colors */
   --brand: oklch(83.6% 0.1177 66.87);
   --brand-foreground: oklch(75.77% 0.159 55.91);
-
-  /* Customized shadcn/ui colors */
   --background: oklch(0.1607 0.0054 67.432);
   --foreground: oklch(0.8563 0.0123 79.7791);
   --card: oklch(0.1801 0.0078 67.2987);
@@ -256,12 +246,8 @@
   --shadow-xl:
     0px 2px 4px 0px hsl(0 0% 0% / 0.1), 0px 8px 10px -1px hsl(0 0% 0% / 0.1);
   --shadow-2xl: 0px 2px 4px 0px hsl(0 0% 0% / 0.25);
-
-  /* Illustrations colors */
   --light: var(--foreground);
   --light-foreground: var(--foreground);
-
-  /* Shadows */
   --shadow: #00000020;
   --shadow-strong: #00000088;
 }

@@ -36,7 +36,6 @@ export default function AdmissionsForm() {
       </div>
       <div className="py-20 px-4 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="space-y-10">
-          {/* Contact Info */}
           <div className="p-6 shadow-md rounded-2xl space-y-4 border">
             <div className="space-y-2">
               <h2 className="text-2xl font-bold">CONTACT US</h2>
@@ -56,7 +55,6 @@ export default function AdmissionsForm() {
             </div>
           </div>
 
-          {/* Admission Age Criteria */}
           <div className="p-6 shadow-md rounded-2xl border space-y-4">
             <h2 className="text-2xl font-bold">
               Admission Age Criteria (2025–26)

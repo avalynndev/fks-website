@@ -5,4 +5,4 @@ export function Banner() {
       for now. Registrations may open in February 2025 in case of vacancies
     </div>
   );
-};
+}

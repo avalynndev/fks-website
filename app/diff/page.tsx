@@ -9,10 +9,9 @@ export default function ComparePDFsPage() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-7xl">
-        {/* PDF 1 */}
         <div className="bg-white rounded-2xl shadow-md p-2">
           <h2 className="text-center text-gray-700 font-medium mb-2">
-            Document 1
+            Old Website
           </h2>
           <iframe
             src={pdf1}
@@ -21,10 +20,9 @@ export default function ComparePDFsPage() {
           />
         </div>
 
-        {/* PDF 2 */}
         <div className="bg-white rounded-2xl shadow-md p-2">
           <h2 className="text-center text-gray-700 font-medium mb-2">
-            Document 2
+            New website
           </h2>
           <iframe
             src={pdf2}

@@ -43,7 +43,6 @@ export default function RootLayout({
 }>) {
   const pathname = usePathname();
 
-  // Find the active menu item
   const activeItem =
     menuItems.find((item) => pathname === item.href) || menuItems[0];
   return (

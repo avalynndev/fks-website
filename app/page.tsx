@@ -61,7 +61,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Right: School Campuses Card */}
         <div className="relative w-full max-w-xl lg:w-1/2 z-10">
           <div className="backdrop-blur-md bg-card/80 border border-border shadow-2xl rounded-xl p-8 z-10 relative">
             <div className="text-center text-lg font-semibold text-green-600 dark:text-green-400 mb-4 pb-2">
@@ -69,7 +68,6 @@ export default function HomePage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6">
-              {/* Main Schools */}
               <div className="flex-1">
                 <div className="bg-green-400 text-blue-900 font-semibold px-3 py-1 rounded mb-2 w-fit mx-auto text-sm">
                   Main Schools
@@ -83,7 +81,6 @@ export default function HomePage() {
                 </Link>
               </div>
 
-              {/* Playgroups */}
               <div className="flex-1 sm:border-l">
                 <div className="bg-green-400 text-blue-900 font-semibold px-3 py-1 rounded mb-2 w-fit mx-auto text-sm">
                   Playgroups
@@ -132,7 +129,6 @@ export default function HomePage() {
         </div>
       </main>
 
-      {/* School Manifesto Section */}
       <div className="w-full lg:w-2/3 ml-auto px-4 lg:px-12 z-20 mb-16 dark:text-background">
         <div className="text-base md:text-lg font-serif whitespace-pre-line text-center">
           {`I am not just an edifice set in stone
@@ -159,7 +155,6 @@ I am the infinite reality!`}
         </div>
       </div>
 
-      {/* Footer */}
       <footer className="w-full flex items-center justify-between text-sm backdrop-blur-md px-4 py-3 text-white">
         <div>© 2021 The Future Kid&apos;s School.</div>
         <ModeToggle />

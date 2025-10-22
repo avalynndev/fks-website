@@ -37,14 +37,12 @@ export default function RootLayout({
 }>) {
   const pathname = usePathname();
 
-  // Find the active menu item
   const activeItem =
     menuItems.find((item) => pathname === item.href) || menuItems[0];
   return (
     <>
       <section className="py-10">
         <div className="relative mx-auto max-w-6xl h-[500px] rounded-3xl overflow-hidden">
-          {/* Background Image changes per page */}
           <FadeImage
             key={pathname}
             src={activeItem.img}
@@ -54,7 +52,6 @@ export default function RootLayout({
             className="object-cover"
           />
 
-          {/* Overlay content */}
           <div className="absolute bottom-8 left-8 bg-white/70 backdrop-blur-md rounded-3xl p-6 max-w-xs">
             <h2 className="text-xl font-semibold mb-4 dark:text-background">
               About Us

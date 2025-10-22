@@ -19,7 +19,6 @@ const Navbar = () => (
           data-slot="navbar"
           className="flex items-center justify-between p-2"
         >
-          {/* Left: Logo */}
           <nav
             data-slot="navbar-left"
             className="lg:pt-8 flex items-center justify-start gap-4"
@@ -37,7 +36,6 @@ const Navbar = () => (
               <span className="hidden md:inline">Future Kids School</span>
             </Link>
           </nav>
-          {/* Right: Auth buttons and hamburger */}
           <nav
             data-slot="navbar-right"
             className="lg:pt-8 flex items-center justify-end gap-4"
@@ -56,7 +54,7 @@ const Navbar = () => (
             >
               {authLinks.getStarted.label}
             </Link>
-           
+
             <div className="lg:hidden">
               <Sheet>
                 <SheetTrigger asChild>
@@ -118,7 +116,7 @@ const Navbar = () => (
                         </li>
                       ))}
                     </ul>
-                  {/**
+                    {/**
                      <div className="mt-6 flex flex-col gap-2">
                       <Link href={authLinks.signIn.href} className=" text-sm">
                         {authLinks.signIn.label}

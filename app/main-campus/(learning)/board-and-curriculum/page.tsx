@@ -7,7 +7,6 @@ export default function HeroSection() {
     <>
       <div className="max-w-6xl mx-auto mb-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center border border-border/50 bg-card/30 p-8 shadow-lg rounded-3xl">
-          {/* LEFT SIDE: TEXT */}
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold">
               BOARD & CURRICULUM
@@ -32,7 +31,6 @@ export default function HeroSection() {
             </p>
           </div>
 
-          {/* RIGHT SIDE: IMAGES STACKED */}
           <div className="flex flex-col gap-6">
             <div className="relative w-full h-64 rounded-lg overflow-hidden shadow-lg transform rotate-2">
               <FadeImage
@@ -54,7 +52,6 @@ export default function HeroSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center border border-border/50 bg-card/30 p-8 shadow-lg rounded-3xl">
-          {/* Image */}
           <div className="relative w-full h-80 rounded-2xl overflow-hidden">
             <FadeImage
               src="/academic.jpg"
@@ -64,7 +61,6 @@ export default function HeroSection() {
             />
           </div>
 
-          {/* Text */}
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold">
               ACADEMIC ACCOLADES
