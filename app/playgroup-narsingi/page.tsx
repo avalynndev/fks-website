@@ -219,10 +219,11 @@ export default function HomePage() {
               {Array.from({ length: count }).map((_, index) => (
                 <button
                   key={index}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${current === index + 1
-                    ? "bg-primary scale-125"
-                    : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
-                    }`}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    current === index + 1
+                      ? "bg-primary scale-125"
+                      : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                  }`}
                   onClick={() => handleDotClick(index)}
                   aria-label={`Go to slide ${index + 1}`}
                 />
@@ -236,10 +237,11 @@ export default function HomePage() {
                 {Array.from({ length: count }).map((_, index) => (
                   <div
                     key={index}
-                    className={`h-1 rounded-full transition-all duration-300 ${current === index + 1
-                      ? "bg-primary w-8"
-                      : "bg-muted-foreground/30 w-4"
-                      }`}
+                    className={`h-1 rounded-full transition-all duration-300 ${
+                      current === index + 1
+                        ? "bg-primary w-8"
+                        : "bg-muted-foreground/30 w-4"
+                    }`}
                   />
                 ))}
               </div>
@@ -295,10 +297,11 @@ export default function HomePage() {
                 <div
                   key={idx}
                   onClick={() => setActiveIndex(idx)}
-                  className={`p-4 rounded-xl border cursor-pointer transition-all hover:-translate-y-1 ${activeIndex === idx
-                    ? "bg-primary/10 border-primary"
-                    : "bg-card/40 border-border/50"
-                    }`}
+                  className={`p-4 rounded-xl border cursor-pointer transition-all hover:-translate-y-1 ${
+                    activeIndex === idx
+                      ? "bg-primary/10 border-primary"
+                      : "bg-card/40 border-border/50"
+                  }`}
                 >
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 aspect-square rounded-full flex items-center justify-center bg-gradient-to-br from-primary/20 to-primary/10 shrink-0">

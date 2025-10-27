@@ -56,10 +56,11 @@ export default function RootLayout({
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className={`cursor-pointer hover:underline ${isActive
+                    className={`cursor-pointer hover:underline ${
+                      isActive
                         ? item.color || "text-blue-700 font-semibold"
                         : "text-blue-700"
-                      }`}
+                    }`}
                   >
                     {item.name}
                   </Link>

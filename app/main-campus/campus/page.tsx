@@ -142,7 +142,12 @@ export default function AdmissionsForm() {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center border border-border/50 bg-card/30 p-8 shadow-lg rounded-3xl">
             <div className="relative w-full h-80 rounded-2xl overflow-hidden">
-              <FadeImage src="/22.jpg" alt="FKS campus interior spaces" fill className="object-cover" />
+              <FadeImage
+                src="/22.jpg"
+                alt="FKS campus interior spaces"
+                fill
+                className="object-cover"
+              />
             </div>
 
             <div className="space-y-6">
@@ -317,10 +322,11 @@ export default function AdmissionsForm() {
               {Array.from({ length: count }).map((_, index) => (
                 <button
                   key={index}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${current === index + 1
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    current === index + 1
                       ? "bg-primary scale-125"
                       : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
-                    }`}
+                  }`}
                   onClick={() => handleDotClick(index)}
                   aria-label={`Go to slide ${index + 1}`}
                 />
@@ -334,10 +340,11 @@ export default function AdmissionsForm() {
                 {Array.from({ length: count }).map((_, index) => (
                   <div
                     key={index}
-                    className={`h-1 rounded-full transition-all duration-300 ${current === index + 1
+                    className={`h-1 rounded-full transition-all duration-300 ${
+                      current === index + 1
                         ? "bg-primary w-8"
                         : "bg-muted-foreground/30 w-4"
-                      }`}
+                    }`}
                   />
                 ))}
               </div>
