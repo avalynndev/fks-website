@@ -352,7 +352,7 @@ export default function HomePage() {
         </div>
       </section>
 
-     <Videos/>
+      <Videos />
     </div>
   );
 }

@@ -56,7 +56,7 @@ export function Videos() {
       thumbnailSrc: "https://i.ytimg.com/vi/DLKSWYdKTRI/hqdefault.jpg",
       videoSrc: "https://www.youtube.com/watch?v=DLKSWYdKTRI",
     },
-  ]
+  ];
   return (
     <>
       <section className="py-12 px-4">
