@@ -100,10 +100,11 @@ export default function PrivacyPolicyPage() {
                 className="text-blue-600 underline"
               >
                 www.thefks.in
-              </a>{" "}
+              </a>
               and other websites associated with such URL (collectively the
-              "Website"). Any Information collected from you through the Website
-              shall be governed by this Privacy Policy (“Privacy Policy”).
+              &quot;Website&quot;). Any Information collected from you through
+              the Website shall be governed by this Privacy Policy
+              (&quot;Privacy Policy&quot;).
             </p>
             <p>
               By accessing the Website, registering on the Website, or availing
@@ -294,7 +295,9 @@ export default function PrivacyPolicyPage() {
         <div className="max-w-container mx-auto">
           <Footer className="bg-transparent">
             <FooterBottom>
-              <div>© 2025 The Future Kid's School. All rights reserved.</div>
+              <div>
+                © 2025 The Future Kid&apos;s School. All rights reserved.
+              </div>
               <div className="flex items-center gap-4">
                 {[
                   { text: "Privacy Policy", href: "/privacy-policy" },

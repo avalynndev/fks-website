@@ -40,7 +40,7 @@ export default function AdmissionsForm() {
             <div className="space-y-2">
               <h2 className="text-2xl font-bold">CONTACT US</h2>
               <p>
-                <strong>The Future Kid's Play Group</strong>
+                <strong>The Future Kid&apos;s Play Group</strong>
                 <br />
                 Plot No. 1248, Rd Number 62, Lane adjacent to Heritage Fresh,
                 <br />
