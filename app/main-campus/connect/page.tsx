@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
@@ -23,6 +24,103 @@ import {
 import FadeImage from "@/components/ui/fade-image";
 
 export default function AdmissionsForm() {
+  const [registrationNumber, setRegistrationNumber] = useState<string | null>(
+    null
+  );
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+
+    const {
+      childName,
+      gender,
+      dob,
+      fatherName,
+      fatherEmail,
+      fatherPhone,
+      fatherOccupation,
+      fatherQualification,
+      motherName,
+      motherEmail,
+      motherPhone,
+      motherOccupation,
+      motherQualification,
+      address,
+      comments,
+      referral,
+    } = data as Record<string, string>;
+
+    const validated = 1;
+
+    if (validated === 1) {
+      fetch(`https://fks-server.vercel.app/api/saveFormData`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          date: new Date().toLocaleDateString("en-GB", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          }),
+          name: childName,
+          gender,
+          dob: new Date(dob).toLocaleDateString("en-GB", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          }),
+          grade: (() => {
+            const year = new Date(dob).getFullYear();
+            const map: Record<number, string> = {
+              2019: "Grade 1",
+              2018: "Grade 2",
+              2017: "Grade 3",
+              2016: "Grade 4",
+              2015: "Grade 5",
+              2014: "Grade 6",
+              2013: "Grade 7",
+              2012: "Grade 8",
+              2011: "Grade 9",
+              2010: "Grade 10",
+            };
+            return map[year] || "Not Qualified";
+          })(),
+          fathersName: fatherName,
+          fathersEmailAddress: fatherEmail,
+          fathersMobileNumber: fatherPhone,
+          fathersQualification: fatherQualification,
+          fathersOccupation: fatherOccupation,
+          mothersName: motherName,
+          mothersEmailAddress: motherEmail,
+          mothersMobileNumber: motherPhone,
+          mothersQualification: motherQualification,
+          mothersOccupation: motherOccupation,
+          address,
+          comments,
+          source: referral,
+          branch: "TFKS",
+        }),
+      })
+        .then((r) => r.json())
+        .then((d) => {
+          if (d.status) {
+            e.currentTarget.reset();
+            setRegistrationNumber(`TFKS-2026-${d.data.submissionId}`);
+            alert(
+              `Form submitted successfully! Registration: TFKS-2026-${d.data.submissionId}`
+            );
+          } else {
+            alert("Duplicate entry detected. Try again with unique details.");
+          }
+        })
+        .catch((err) => {
+          console.error("Error:", err);
+          alert("Something went wrong while submitting the form.");
+        });
+    }
+  };
   return (
     <div className="px-4 pb-10 pt-4">
       <div className="relative mx-auto max-w-7xl h-[500px] rounded-3xl overflow-hidden">
@@ -90,7 +188,7 @@ export default function AdmissionsForm() {
         </div>
         <div className="border border-muted p-8 shadow-md rounded-2xl space-y-6">
           <h2 className="text-2xl font-bold text-primary">ADMISSIONS FORM</h2>
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label htmlFor="childName">Child&apos;s Name*</Label>

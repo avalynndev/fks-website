@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
@@ -23,6 +24,95 @@ import {
 import FadeImage from "@/components/ui/fade-image";
 
 export default function AdmissionsForm() {
+  const [registrationNumber, setRegistrationNumber] = useState<string | null>(
+    null
+  );
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+
+    const {
+      childName,
+      gender,
+      dob,
+      fatherName,
+      fatherEmail,
+      fatherPhone,
+      fatherOccupation,
+      fatherQualification,
+      motherName,
+      motherEmail,
+      motherPhone,
+      motherOccupation,
+      motherQualification,
+      address,
+      comments,
+      referral,
+    } = data as Record<string, string>;
+
+    const validated = 1;
+
+    if (validated === 1) {
+      fetch(`https://fks-server.vercel.app/api/saveFormData`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          date: new Date().toLocaleDateString("en-GB", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          }),
+          name: childName,
+          gender: gender,
+          dob: new Date(dob).toLocaleDateString("en-GB", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          }),
+          grade: (() => {
+            const year = new Date(dob).getFullYear();
+            if (year === 2022) return "PRE - KG";
+            if (year === 2021) return "Lower - KG";
+            if (year === 2020) return "Upper - KG";
+            return "Not Qualified";
+          })(),
+          fathersName: fatherName,
+          fathersEmailAddress: fatherEmail,
+          fathersMobileNumber: fatherPhone,
+          fathersQualification: fatherQualification,
+          fathersOccupation: fatherOccupation,
+          mothersName: motherName,
+          mothersEmailAddress: motherEmail,
+          mothersMobileNumber: motherPhone,
+          mothersQualification: motherQualification,
+          mothersOccupation: motherOccupation,
+          address,
+          comments,
+          source: referral,
+          branch: "PPG",
+        }),
+      })
+        .then((r) => r.json())
+        .then((d) => {
+          if (d.status) {
+            e.currentTarget.reset();
+            setRegistrationNumber(`PPG-2026-${d.data.submissionId}`);
+            alert(
+              `Form submitted successfully! Registration: PPG-2026-${d.data.submissionId}`
+            );
+          } else {
+            alert("Duplicate entry detected. Try again with unique details.");
+          }
+        })
+        .catch((err) => {
+          console.error("Error:", err);
+          alert("Something went wrong while submitting the form.");
+        });
+    }
+  };
+
   return (
     <div className="px-4 pb-10 pt-4">
       <div className="relative mx-auto max-w-7xl h-[500px] rounded-3xl overflow-hidden">
@@ -37,22 +127,17 @@ export default function AdmissionsForm() {
       <div className="py-20 px-4 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="space-y-10">
           <div className="p-6 shadow-md rounded-2xl space-y-4 border">
-            <div className="space-y-2">
-              <h2 className="text-2xl font-bold">CONTACT US</h2>
-              <p>
-                <strong>The Future Kid&apos;s Play Group</strong>
-                <br />
-                Plot No. 1248, Rd Number 62, Lane adjacent to Heritage Fresh,
-                <br />
-                Jubilee Hills, Hyderabad, Telangana 500033
-              </p>
-            </div>
-            <div className="space-y-1">
-              <p>📞 +91 72079 90125</p>
-              <p>✉️ connect@thefkspg.in</p>
-            </div>
+            <h2 className="text-2xl font-bold">CONTACT US</h2>
+            <p>
+              <strong>The Future Kid&apos;s Play Group</strong>
+              <br />
+              Plot No. 1248, Rd Number 62, Lane adjacent to Heritage Fresh,
+              <br />
+              Jubilee Hills, Hyderabad, Telangana 500033
+            </p>
+            <p>📞 +91 72079 90125</p>
+            <p>✉️ connect@thefkspg.in</p>
           </div>
-
           <div className="p-6 shadow-md rounded-2xl border space-y-4">
             <h2 className="text-2xl font-bold">
               Admission Age Criteria (2025–26)
@@ -81,7 +166,7 @@ export default function AdmissionsForm() {
         </div>
         <div className="border border-muted p-8 shadow-md rounded-2xl space-y-6">
           <h2 className="text-2xl font-bold text-primary">ADMISSIONS FORM</h2>
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label htmlFor="childName">Child&apos;s Name*</Label>

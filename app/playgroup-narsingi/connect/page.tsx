@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
@@ -11,6 +12,7 @@ import {
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import FadeImage from "@/components/ui/fade-image";
 import { GoogleMapsEmbed } from "@next/third-parties/google";
 import {
   Table,
@@ -20,9 +22,112 @@ import {
   TableBody,
   TableCell,
 } from "@/components/ui/table";
-import FadeImage from "@/components/ui/fade-image";
 
 export default function AdmissionsForm() {
+  const [registrationNumber, setRegistrationNumber] = useState<string | null>(
+    null
+  );
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+
+    const {
+      childName,
+      gender,
+      dob,
+      fatherName,
+      fatherEmail,
+      fatherPhone,
+      fatherQualification,
+      fatherOccupation,
+      motherName,
+      motherEmail,
+      motherPhone,
+      motherQualification,
+      motherOccupation,
+      address,
+      comments,
+      referral,
+    } = data as Record<string, string>;
+
+    if (
+      !childName ||
+      !gender ||
+      !dob ||
+      !fatherEmail ||
+      !fatherPhone ||
+      !motherEmail ||
+      !motherPhone
+    ) {
+      alert("Please fill all required fields.");
+      return;
+    }
+
+    const validated = 1;
+
+    if (validated === 1) {
+      fetch(`https://fks-server.vercel.app/api/saveFormData`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          date: new Date().toLocaleDateString("en-GB", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          }),
+          name: childName,
+          gender: gender,
+          dob: new Date(dob).toLocaleDateString("en-GB", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          }),
+          grade: (() => {
+            const yearOfBirth = new Date(dob).getFullYear();
+            if (yearOfBirth === 2022) return "PRE - KG";
+            if (yearOfBirth === 2021) return "Lower - KG";
+            if (yearOfBirth === 2020) return "Upper - KG";
+            return "Not Qualified";
+          })(),
+          fathersName: fatherName,
+          fathersEmailAddress: fatherEmail,
+          fathersMobileNumber: fatherPhone,
+          fathersQualification: fatherQualification,
+          fathersOccupation: fatherOccupation,
+          mothersName: motherName,
+          mothersEmailAddress: motherEmail,
+          mothersMobileNumber: motherPhone,
+          mothersQualification: motherQualification,
+          mothersOccupation: motherOccupation,
+          address: address,
+          comments: comments,
+          source: referral,
+          branch: "PPG",
+        }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.status) {
+            e.currentTarget.reset();
+            setRegistrationNumber(`PPG-2026-${data.data.submissionId}`);
+            alert(
+              `Form submitted successfully! Your registration number: PPG-2026-${data.data.submissionId}`
+            );
+          } else {
+            alert(
+              "Admission request already exists for one of the entered details."
+            );
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          alert("Something went wrong while submitting the form.");
+        });
+    }
+  };
+
   return (
     <div className="px-4 pb-10 pt-4">
       <div className="relative mx-auto max-w-7xl h-[500px] rounded-3xl overflow-hidden">
@@ -81,7 +186,7 @@ export default function AdmissionsForm() {
         </div>
         <div className="border border-muted p-8 shadow-md rounded-2xl space-y-6">
           <h2 className="text-2xl font-bold text-primary">ADMISSIONS FORM</h2>
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label htmlFor="childName">Child&apos;s Name*</Label>
