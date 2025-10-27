@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
 import { Link } from "next-view-transitions";
 import FadeImage from "@/components/ui/fade-image";
@@ -9,8 +9,8 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
-import { ThemeToggle } from "./theme-toggle";
-import { navigationLinks, authLinks } from "@/config/navigation";
+import { ThemeToggle } from "../theme-toggle";
+import { MainCampus_NavigationLinks, authLinks } from "@/config/navigation";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -119,7 +119,7 @@ const Navbar = () => {
                     </SheetHeader>
                     <nav className="flex flex-col gap-2 p-6">
                       <ul className="flex flex-col gap-2">
-                        {navigationLinks.map((link) => (
+                        {MainCampus_NavigationLinks.map((link) => (
                           <li key={link.href}>
                             <Link
                               href={link.href}
@@ -158,7 +158,7 @@ const Navbar = () => {
                 className="group flex flex-1 list-none items-center justify-center space-x-1"
                 dir="ltr"
               >
-                {navigationLinks.map((link) => (
+                {MainCampus_NavigationLinks.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}

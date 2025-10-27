@@ -2,8 +2,13 @@ import { ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
 
-import { Footer, FooterBottom, FooterColumn, FooterContent } from "./ui/footer";
-import { ModeToggle } from "./ui/mode-toggle";
+import {
+  Footer,
+  FooterBottom,
+  FooterColumn,
+  FooterContent,
+} from "../ui/footer";
+import { ModeToggle } from "../ui/mode-toggle";
 import FadeImage from "@/components/ui/fade-image";
 import { Link } from "next-view-transitions";
 
@@ -42,9 +47,9 @@ export default function FooterSection({
       title: "Links",
       links: [
         { text: "Home", href: "/" },
-        { text: "Admissions", href: "/main-campus/connect" },
-        { text: "Nutrition", href: "/main-campus/nutrition" },
-        { text: "Campus", href: "/main-campus/campus" },
+        { text: "Admissions", href: "/playgroup-narsingi/connect" },
+        { text: "Well Being", href: "/playgroup-narsingi/well-being" },
+        { text: "Campus", href: "/playgroup-narsingi/campus" },
       ],
     },
   ],
@@ -67,13 +72,11 @@ export default function FooterSection({
                 <h3 className="text-xl font-bold">{name}</h3>
               </div>
               <p>
-                Puppal Guda, Rajendranagar Mandal, RR Dist, Hyderabad, Telangana
-                500075
+                H. No. 2-113/4/1 & 2-113/4/2, Venkateswara kuteer, Manchirevula,
+                Narsingi , Ranga Reddy District. Pin -500075
               </p>
-              <p>📞 +91 9959 319 742</p>
-              <p>📞 +91 9154 219 742</p>
-              <p>📧 connect@thefks.in</p>
-              <p>📧 admissions@thefks.in</p>
+              <p>📞 +91 73311 17805</p>
+              <p>📧 connect@thefksnsg.in</p>
             </FooterColumn>
             <FooterColumn className="md:col-start-4">
               {columns[0].links.map((link, linkIndex) => (

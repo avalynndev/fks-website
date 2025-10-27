@@ -4,7 +4,7 @@ export interface NavigationLink {
   external?: boolean;
 }
 
-export const navigationLinks: NavigationLink[] = [
+export const MainCampus_NavigationLinks: NavigationLink[] = [
   {
     href: "/main-campus/our-story",
     label: "About Us",
@@ -23,6 +23,52 @@ export const navigationLinks: NavigationLink[] = [
   },
   {
     href: "/main-campus/connect",
+    label: "Get In Touch",
+  },
+];
+
+export const JubileeHills_NavigationLinks: NavigationLink[] = [
+  {
+    href: "/playgroup-jubileehills/our-story",
+    label: "About Us",
+  },
+  {
+    href: "/playgroup-jubileehills/thematic-learning",
+    label: "Learning at FKS",
+  },
+  {
+    href: "/playgroup-jubileehills/well-being",
+    label: "Beyond Learning",
+  },
+  {
+    href: "/playgroup-jubileehills/campus",
+    label: "Campus",
+  },
+  {
+    href: "/playgroup-jubileehills/connect",
+    label: "Get In Touch",
+  },
+];
+
+export const Narsingi_NavigationLinks: NavigationLink[] = [
+  {
+    href: "/playgroup-narsingi/our-story",
+    label: "About Us",
+  },
+  {
+    href: "/playgroup-narsingi/thematic-learning",
+    label: "Learning at FKS",
+  },
+  {
+    href: "/playgroup-narsingi/well-being",
+    label: "Beyond Learning",
+  },
+  {
+    href: "/playgroup-narsingi/campus",
+    label: "Campus",
+  },
+  {
+    href: "/playgroup-narsingi/connect",
     label: "Get In Touch",
   },
 ];

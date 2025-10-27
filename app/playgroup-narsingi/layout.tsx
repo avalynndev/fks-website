@@ -1,6 +1,5 @@
-import Navbar from "@/components/main-campus/navbar";
-import { Banner } from "@/components/main-campus/banner";
-import Footer from "@/components/main-campus/footer";
+import Navbar from "@/components/narsingi/navbar";
+import Footer from "@/components/narsingi/footer";
 
 export default function RootLayout({
   children,
@@ -9,7 +8,6 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <Banner />
       <Navbar />
       <main className="overflow-x-hidden md:overflow-visible">
         <div className="relative overflow-hidden">
