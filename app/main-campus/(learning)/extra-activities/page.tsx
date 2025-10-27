@@ -57,7 +57,7 @@ export default function HeroSection() {
           <div className="relative w-full h-80 rounded-2xl overflow-hidden order-first lg:order-last">
             <FadeImage
               src="/extrabg.jpeg"
-              alt="e"
+              alt="Extra curricular activities background"
               fill
               className="object-cover"
             />

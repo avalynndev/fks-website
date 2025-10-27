@@ -10,7 +10,7 @@ export default function HeroSection() {
       title: "Environment",
       icon: Star,
       text: "Students are surrounded by an environment that nurtures curiosity, supports their growth, and empowers them to be their best selves.",
-      image: "/Enivronment.jpg",
+      image: "/Environment.jpg",
     },
     {
       title: "Exploration",
@@ -108,11 +108,10 @@ export default function HeroSection() {
                     <div
                       key={idx}
                       onClick={() => setActiveIndex(idx)}
-                      className={`p-4 rounded-xl border cursor-pointer transition-all hover:-translate-y-1 ${
-                        activeIndex === idx
+                      className={`p-4 rounded-xl border cursor-pointer transition-all hover:-translate-y-1 ${activeIndex === idx
                           ? "bg-primary/10 border-primary"
                           : "bg-card/40 border-border/50"
-                      }`}
+                        }`}
                     >
                       <div className="flex items-center gap-4">
                         <div className="w-12 h-12 aspect-square rounded-full flex items-center justify-center bg-gradient-to-br from-primary/20 to-primary/10 shrink-0">

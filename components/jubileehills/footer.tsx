@@ -48,7 +48,7 @@ export default function FooterSection({
       links: [
         { text: "Home", href: "/" },
         { text: "Admissions", href: "/playgroup-jubileehills/connect" },
-        { text: "well-being", href: "/playgroup-jubileehills/well-being" },
+        { text: "Well Being", href: "/playgroup-jubileehills/well-being" },
         { text: "Campus", href: "/playgroup-jubileehills/campus" },
       ],
     },

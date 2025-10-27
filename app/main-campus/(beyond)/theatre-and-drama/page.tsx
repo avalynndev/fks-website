@@ -49,7 +49,7 @@ export default function HeroSection() {
           <div className="relative w-full h-80 rounded-2xl overflow-hidden order-first lg:order-last">
             <FadeImage
               src="/perf1.jpg"
-              alt="perf"
+              alt="Theatre performance at FKS"
               fill
               className="object-cover"
             />

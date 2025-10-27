@@ -6,19 +6,19 @@ import { Link } from "next-view-transitions";
 const menuItems = [
   {
     name: "Our Story",
-    href: "/playgroup-jubileehills/our-story",
+    href: "/playgroup-narsingi/our-story",
     color: "text-green-600",
     img: "/Our-Story-Banner.jpg",
   },
   {
     name: "FKS Perspective - Philosophy, Vision & Mission",
-    href: "/playgroup-jubileehills/mission-and-vision",
+    href: "/playgroup-narsingi/mission-and-vision",
     color: "text-green-600",
     img: "/M&V-Banner.jpg",
   },
   {
     name: "FKS Force (Team)",
-    href: "/playgroup-jubileehills/fks-force",
+    href: "/playgroup-narsingi/fks-force",
     color: "text-green-600",
     img: "/banner1.jpg",
   },
@@ -56,11 +56,10 @@ export default function RootLayout({
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className={`cursor-pointer hover:underline ${
-                      isActive
+                    className={`cursor-pointer hover:underline ${isActive
                         ? item.color || "text-blue-700 font-semibold"
                         : "text-blue-700"
-                    }`}
+                      }`}
                   >
                     {item.name}
                   </Link>

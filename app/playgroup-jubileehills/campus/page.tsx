@@ -21,7 +21,7 @@ export default function AdmissionsForm() {
             <div className="relative w-full h-80 rounded-2xl overflow-hidden">
               <FadeImage
                 src="/playca1.jpg"
-                alt="1"
+                alt="Playgroup campus view"
                 fill
                 className="object-cover"
               />
@@ -68,7 +68,7 @@ export default function AdmissionsForm() {
             <div className="relative w-full h-80 rounded-2xl overflow-hidden order-first lg:order-last">
               <FadeImage
                 src="/playca2.png"
-                alt="2"
+                alt="Playgroup campus facilities"
                 fill
                 className="object-cover"
               />
@@ -82,7 +82,7 @@ export default function AdmissionsForm() {
           height={400}
           width="100%"
           mode="place"
-          q="The+Future+Kid's+Play+Group,Jubliee+Hills"
+          q="The+Future+Kid's+Play+Group,Jubilee+Hills"
         />
       </section>
     </div>

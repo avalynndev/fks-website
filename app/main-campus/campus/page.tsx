@@ -91,7 +91,7 @@ export default function AdmissionsForm() {
             <div className="relative w-full h-80 rounded-2xl overflow-hidden">
               <FadeImage
                 src="/campus1.jpg"
-                alt="1"
+                alt="FKS campus exterior view"
                 fill
                 className="object-cover"
               />
@@ -134,7 +134,7 @@ export default function AdmissionsForm() {
             <div className="relative w-full h-80 rounded-2xl overflow-hidden order-first lg:order-last">
               <FadeImage
                 src="/campus2.jpg"
-                alt="2"
+                alt="FKS campus landscape and architecture"
                 fill
                 className="object-cover"
               />
@@ -142,7 +142,7 @@ export default function AdmissionsForm() {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center border border-border/50 bg-card/30 p-8 shadow-lg rounded-3xl">
             <div className="relative w-full h-80 rounded-2xl overflow-hidden">
-              <FadeImage src="/22.jpg" alt="1" fill className="object-cover" />
+              <FadeImage src="/22.jpg" alt="FKS campus interior spaces" fill className="object-cover" />
             </div>
 
             <div className="space-y-6">
@@ -180,7 +180,7 @@ export default function AdmissionsForm() {
               <div className="relative h-[80vh] min-h-[600px] w-full flex items-end rounded-3xl overflow-hidden">
                 <FadeImage
                   src="/item1.jpeg"
-                  alt="1"
+                  alt="Campus gallery image 1"
                   fill
                   className="absolute inset-0 object-cover rounded-3xl"
                 />
@@ -193,7 +193,7 @@ export default function AdmissionsForm() {
               <div className="relative h-[80vh] min-h-[600px] w-full flex items-end rounded-3xl overflow-hidden">
                 <FadeImage
                   src="/item2.jpeg"
-                  alt="2"
+                  alt="Campus gallery image 2"
                   fill
                   className="absolute inset-0 object-cover rounded-3xl"
                 />
@@ -205,7 +205,7 @@ export default function AdmissionsForm() {
               <div className="relative h-[80vh] min-h-[600px] w-full flex items-end rounded-3xl overflow-hidden">
                 <FadeImage
                   src="/item3.jpeg"
-                  alt="2"
+                  alt="Campus gallery image 3"
                   fill
                   className="absolute inset-0 object-cover rounded-3xl"
                 />
@@ -217,7 +217,7 @@ export default function AdmissionsForm() {
               <div className="relative h-[80vh] min-h-[600px] w-full flex items-end rounded-3xl overflow-hidden">
                 <FadeImage
                   src="/item4.jpg"
-                  alt="2"
+                  alt="Campus gallery image 4"
                   fill
                   className="absolute inset-0 object-cover rounded-3xl"
                 />
@@ -229,7 +229,7 @@ export default function AdmissionsForm() {
               <div className="relative h-[80vh] min-h-[600px] w-full flex items-end rounded-3xl overflow-hidden">
                 <FadeImage
                   src="/item5.jpeg"
-                  alt="2"
+                  alt="Campus gallery image 5"
                   fill
                   className="absolute inset-0 object-cover rounded-3xl"
                 />
@@ -317,11 +317,10 @@ export default function AdmissionsForm() {
               {Array.from({ length: count }).map((_, index) => (
                 <button
                   key={index}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    current === index + 1
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${current === index + 1
                       ? "bg-primary scale-125"
                       : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
-                  }`}
+                    }`}
                   onClick={() => handleDotClick(index)}
                   aria-label={`Go to slide ${index + 1}`}
                 />
@@ -335,11 +334,10 @@ export default function AdmissionsForm() {
                 {Array.from({ length: count }).map((_, index) => (
                   <div
                     key={index}
-                    className={`h-1 rounded-full transition-all duration-300 ${
-                      current === index + 1
+                    className={`h-1 rounded-full transition-all duration-300 ${current === index + 1
                         ? "bg-primary w-8"
                         : "bg-muted-foreground/30 w-4"
-                    }`}
+                      }`}
                   />
                 ))}
               </div>

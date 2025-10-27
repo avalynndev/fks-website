@@ -77,7 +77,7 @@ export default function AdmissionsForm() {
                   ["Grade 7", "2013"],
                   ["Grade 8", "2012"],
                   ["Grade 9", "2011"],
-                  ["Grade 11", "2010"],
+                  ["Grade 10", "2010"],
                 ].map(([grade, year]) => (
                   <TableRow key={grade}>
                     <TableCell>{grade}</TableCell>

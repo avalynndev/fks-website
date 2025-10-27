@@ -27,7 +27,7 @@ export default function HeroSection() {
             <div className="relative w-full h-80 rounded-2xl overflow-hidden order-first lg:order-last">
               <FadeImage
                 src="/field1.jpg"
-                alt=""
+                alt="Field trip students exploring outdoors"
                 fill
                 className="object-cover"
               />
@@ -38,7 +38,7 @@ export default function HeroSection() {
             <div className="relative w-full h-80 rounded-2xl overflow-hidden">
               <FadeImage
                 src="/field2.jpg"
-                alt=""
+                alt="Students on educational field trip"
                 fill
                 className="object-cover"
               />
@@ -46,7 +46,7 @@ export default function HeroSection() {
 
             <div className="space-y-6">
               <p className="text-muted-foreground leading-relaxed">
-                Wiith a beautiful, diverse and huge country like ours, with its
+                With a beautiful, diverse and huge country like ours, with its
                 mountains and beaches and snow and sand to explore – FKS plans
                 its trips within India, to unveil the beauty of our motherland
                 with our children. Rest of the world? Maybe someday, when we are

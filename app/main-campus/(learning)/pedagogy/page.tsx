@@ -10,7 +10,7 @@ export default function HeroSection() {
       title: "Environment",
       icon: Star,
       text: "Students are surrounded by an environment that nurtures curiosity, supports their growth, and empowers them to be their best selves.",
-      image: "/Enivronment.jpg",
+      image: "/Environment.jpg",
     },
     {
       title: "Exploration",
@@ -47,11 +47,10 @@ export default function HeroSection() {
                   <div
                     key={idx}
                     onClick={() => setActiveIndex(idx)}
-                    className={`p-4 rounded-xl border cursor-pointer transition-all hover:-translate-y-1 ${
-                      activeIndex === idx
-                        ? "bg-primary/10 border-primary"
-                        : "bg-card/40 border-border/50"
-                    }`}
+                    className={`p-4 rounded-xl border cursor-pointer transition-all hover:-translate-y-1 ${activeIndex === idx
+                      ? "bg-primary/10 border-primary"
+                      : "bg-card/40 border-border/50"
+                      }`}
                   >
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 aspect-square rounded-full flex items-center justify-center bg-gradient-to-br from-primary/20 to-primary/10 shrink-0">
@@ -110,13 +109,13 @@ export default function HeroSection() {
             <div className="relative w-full h-64 rounded-lg overflow-hidden shadow-lg transform rotate-2">
               <FadeImage
                 src="/learning.jpeg"
-                alt="1"
+                alt="Learning environment at FKS"
                 fill
                 className="object-cover"
               />
             </div>
             <div className="relative w-full h-64 rounded-lg overflow-hidden shadow-lg transform -rotate-1">
-              <FadeImage src="/9.jpg" alt="2" fill className="object-cover" />
+              <FadeImage src="/9.jpg" alt="Students in classroom" fill className="object-cover" />
             </div>
           </div>
         </div>
@@ -142,7 +141,7 @@ export default function HeroSection() {
           <div className="relative w-124 h-64 transform -rotate-6 shadow-lg border-4 border-white rounded-lg overflow-hidden">
             <FadeImage
               src="/ko.jpg"
-              alt="Gallery 1"
+              alt="Kartik learning programme students"
               fill
               className="object-cover"
             />
@@ -150,7 +149,7 @@ export default function HeroSection() {
           <div className="relative w-132 h-72 transform rotate-3 shadow-lg border-4 border-white rounded-lg overflow-hidden z-10">
             <FadeImage
               src="/peda.jpg"
-              alt="Gallery 2"
+              alt="Pedagogy in action"
               fill
               className="object-cover"
             />
@@ -158,7 +157,7 @@ export default function HeroSection() {
           <div className="relative w-114 h-64 transform rotate-6 shadow-lg border-4 border-white rounded-lg overflow-hidden">
             <FadeImage
               src="/10.jpg"
-              alt="Gallery 3"
+              alt="Classroom learning activities"
               fill
               className="object-cover"
             />

@@ -27,7 +27,7 @@ export default function AdmissionsForm() {
     <div className="px-4 pb-10 pt-4">
       <div className="relative mx-auto max-w-7xl h-[500px] rounded-3xl overflow-hidden">
         <FadeImage
-          src="/conect1.jpg"
+          src="/connect1.jpg"
           alt="Connect"
           fill
           priority
@@ -222,7 +222,7 @@ export default function AdmissionsForm() {
           height={400}
           width="100%"
           mode="place"
-          q="The+Future+Kid's+Play+Group,Jubliee+Hills"
+          q="The+Future+Kid's+Play+Group,Jubilee+Hills"
         />
       </section>
     </div>
